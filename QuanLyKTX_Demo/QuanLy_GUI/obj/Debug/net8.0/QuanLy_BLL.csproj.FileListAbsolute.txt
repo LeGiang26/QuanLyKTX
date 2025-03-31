@@ -1,0 +1,14 @@
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\bin\Debug\net8.0\QuanLy_BLL.deps.json
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\bin\Debug\net8.0\QuanLy_BLL.dll
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\bin\Debug\net8.0\QuanLy_BLL.pdb
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.csproj.AssemblyReference.cache
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.AssemblyInfoInputs.cache
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.AssemblyInfo.cs
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.csproj.CoreCompileInputs.cache
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.sourcelink.json
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.csproj.Up2Date
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.dll
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\refint\QuanLy_BLL.dll
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\QuanLy_BLL.pdb
+C:\Users\LG\Desktop\QuanLyKTX\QuanLyKTX_Demo\QuanLy_GUI\obj\Debug\net8.0\ref\QuanLy_BLL.dll

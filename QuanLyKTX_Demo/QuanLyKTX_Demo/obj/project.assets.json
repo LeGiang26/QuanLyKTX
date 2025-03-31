@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "QuanLy_BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "QuanLy_DAL": "1.0.0",
+          "TransferObject": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QuanLy_BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuanLy_BLL.dll": {}
+        }
+      },
+      "QuanLy_DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "TransferObject": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QuanLy_DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuanLy_DAL.dll": {}
+        }
+      },
+      "TransferObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TransferObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TransferObject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "QuanLy_BLL/1.0.0": {
+      "type": "project",
+      "path": "../QuanLy_GUI/QuanLy_BLL.csproj",
+      "msbuildProject": "../QuanLy_GUI/QuanLy_BLL.csproj"
+    },
+    "QuanLy_DAL/1.0.0": {
+      "type": "project",
+      "path": "../QuanLy_BLL/QuanLy_DAL.csproj",
+      "msbuildProject": "../QuanLy_BLL/QuanLy_DAL.csproj"
+    },
+    "TransferObject/1.0.0": {
+      "type": "project",
+      "path": "../TransferObject/TransferObject.csproj",
+      "msbuildProject": "../TransferObject/TransferObject.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "QuanLy_BLL >= 1.0.0",
+      "TransferObject >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\LG\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\LG\\Desktop\\QuanLyKTX\\QuanLyKTX_Demo\\QuanLyKTX_Demo\\QuanLyKTX_GUI.csproj",
+      "projectName": "QuanLyKTX_GUI",
+      "projectPath": "C:\\Users\\LG\\Desktop\\QuanLyKTX\\QuanLyKTX_Demo\\QuanLyKTX_Demo\\QuanLyKTX_GUI.csproj",
+      "packagesPath": "C:\\Users\\LG\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LG\\Desktop\\QuanLyKTX\\QuanLyKTX_Demo\\QuanLyKTX_Demo\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\LG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\LG\\Desktop\\QuanLyKTX\\QuanLyKTX_Demo\\QuanLy_GUI\\QuanLy_BLL.csproj": {
+              "projectPath": "C:\\Users\\LG\\Desktop\\QuanLyKTX\\QuanLyKTX_Demo\\QuanLy_GUI\\QuanLy_BLL.csproj"
+            },
+            "C:\\Users\\LG\\Desktop\\QuanLyKTX\\QuanLyKTX_Demo\\TransferObject\\TransferObject.csproj": {
+              "projectPath": "C:\\Users\\LG\\Desktop\\QuanLyKTX\\QuanLyKTX_Demo\\TransferObject\\TransferObject.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
