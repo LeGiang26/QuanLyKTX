@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace QuanLy_BLL
 {
-    class DangNhap_BL
+    public class NguoiDung_BL: 
     {
     }
 }

@@ -16,5 +16,10 @@ namespace QuanLyKyTucXa_main
         {
             InitializeComponent();
         }
+
+        private void FrmDoiMatKhau_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

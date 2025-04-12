@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace QuanLy_DAL
 {
-    class DtataProvider
+    public class DataProvider
     {
-        public class DataProvider
-        {
             private SqlConnection cn;
 
             public DataProvider()
@@ -86,8 +84,5 @@ namespace QuanLy_DAL
                 }
 
             }
-
-
-        }
     }
 }

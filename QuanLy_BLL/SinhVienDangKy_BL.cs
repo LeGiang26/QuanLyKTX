@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLy_DAL
+namespace QuanLy_BLL
 {
-    class DangNhap_DL
+    class SinhVienDangKy_BL
     {
     }
 }

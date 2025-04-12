@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyKyTucXa_main
 {
-    public partial class FrmQuanLyKyLuat : Form
+    public partial class DanhSachDangKy: Form
     {
-        public FrmQuanLyKyLuat()
+        public DanhSachDangKy()
         {
             InitializeComponent();
         }

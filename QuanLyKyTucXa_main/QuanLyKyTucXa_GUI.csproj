@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBaoCao.cs">
+    <Compile Include="DanhSachDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBaoCao.Designer.cs">
-      <DependentUpon>FrmBaoCao.cs</DependentUpon>
+    <Compile Include="DanhSachDangKy.Designer.cs">
+      <DependentUpon>DanhSachDangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDangKyPhong.cs">
       <SubType>Form</SubType>
@@ -70,24 +70,6 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMainMenu.Designer.cs">
-      <DependentUpon>FrmMainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQuanLyDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQuanLyDichVu.Designer.cs">
-      <DependentUpon>FrmQuanLyDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQuanLyKyLuat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQuanLyKyLuat.Designer.cs">
-      <DependentUpon>FrmQuanLyKyLuat.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmQuanLyNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,22 +82,25 @@
     <Compile Include="FrmQuanLyNhanVien.Designer.cs">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLyPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQuanLyPhong.Designer.cs">
-      <DependentUpon>FrmQuanLyPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQuanLySinhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQuanLySinhVien.Designer.cs">
-      <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DanhSachDangKy.resx">
+      <DependentUpon>DanhSachDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangKyPhong.resx">
+      <DependentUpon>FrmDangKyPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoiMatKhau.resx">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyNguoiDung.resx">
+      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyNhanVien.resx">
+      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
