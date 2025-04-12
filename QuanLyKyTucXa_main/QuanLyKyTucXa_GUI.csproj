@@ -52,6 +52,18 @@
     <Compile Include="DanhSachDangKy.Designer.cs">
       <DependentUpon>DanhSachDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm QuanLyQuyDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm QuanLyQuyDinh.Designer.cs">
+      <DependentUpon>Frm QuanLyQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoCao.Designer.cs">
+      <DependentUpon>FrmBaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDangKyPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,18 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainMenu.Designer.cs">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyDichVu.Designer.cs">
+      <DependentUpon>FrmQuanLyDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQuanLyNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +105,18 @@
     </Compile>
     <Compile Include="FrmQuanLyNhanVien.Designer.cs">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyPhong.Designer.cs">
+      <DependentUpon>FrmQuanLyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLySinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLySinhVien.Designer.cs">
+      <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
