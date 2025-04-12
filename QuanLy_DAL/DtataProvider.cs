@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QuanLy_DAL
+{
+    class DtataProvider
+    {
+        public class DataProvider
+        {
+            private SqlConnection cn;
+
+            public DataProvider()
+            {
+                // Link của chi, mn đổi cái khác nha
+                string cnStr = "Data Source=LAPTOP-MAMQ0DB1\\LION;Initial Catalog=QuanLyKyTucXa;Integrated Security=True";
+                cn = new SqlConnection(cnStr);
+            }
+
+            public void Connect()
+            {
+                try
+                {
+                    if (cn != null && cn.State == ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+
+            }
+            public void DisConnect()
+            {
+                try
+                {
+                    if (cn != null && cn.State == ConnectionState.Open)
+                    {
+                        cn.Close();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+            }
+            public object MyExecuteScalar(string sql, CommandType type)
+            {
+                try
+                {
+                    Connect();
+                    SqlCommand cmd = new SqlCommand(sql, cn);
+                    cmd.CommandType = type;
+
+                    return (cmd.ExecuteScalar());
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    DisConnect();
+                }
+            }
+
+            public SqlDataReader MyExecuteReader(string sql, CommandType type)
+            {
+                try
+                {
+
+                    SqlCommand cmd = new SqlCommand(sql, cn);
+                    cmd.CommandType = type;
+
+                    return (cmd.ExecuteReader());
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+
+            }
+
+
+        }
+    }
+}
