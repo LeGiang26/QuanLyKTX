@@ -22,13 +22,13 @@ namespace TransferObject
 
         public string hesoluong { get; set; }
 
-        public NhanVien(string maNV, string tenNV, string gioiTinh, string diaChi, string ngaSinh, string soDienThoai, string heSoLuong)
+        public NhanVien(string maNV, string tenNV, string gioiTinh, string diaChi, string ngaySinh, string soDienThoai, string heSoLuong)
         {
             this.manv = maNV;
             this.tennv = tenNV;
             this.gioitinh = gioiTinh;
             this.diachi = diaChi;
-            this.ngaysinh = ngaSinh;
+            this.ngaysinh = ngaySinh;
             this.sodienthoai = soDienThoai;
             this.hesoluong = heSoLuong;
         }
