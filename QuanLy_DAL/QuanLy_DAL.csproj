@@ -42,11 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DangNhap_DL.cs" />
+    <Compile Include="DanhSachDangKy_DL.cs" />
     <Compile Include="DataProvider.cs" />
-    <Compile Include="NguoiDung_DL.cs" />
-    <Compile Include="NhanVien_DL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDay_DL.cs" />
+    <Compile Include="QuanLyNguoiDung_DL.cs" />
+    <Compile Include="QuanLyNhanVien_DL.cs" />
     <Compile Include="SinhVienDangKy_DL.cs" />
+    <Compile Include="ThanhToanLuongNhanVien_DL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransferObject\TransferObject.csproj">

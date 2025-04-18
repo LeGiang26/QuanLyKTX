@@ -52,17 +52,11 @@
     <Compile Include="DanhSachDangKy.Designer.cs">
       <DependentUpon>DanhSachDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm QuanLyQuyDinh.cs">
+    <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm QuanLyQuyDinh.Designer.cs">
-      <DependentUpon>Frm QuanLyQuyDinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBaoCao.Designer.cs">
-      <DependentUpon>FrmBaoCao.cs</DependentUpon>
+    <Compile Include="FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDangKyPhong.cs">
       <SubType>Form</SubType>
@@ -82,46 +76,43 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMainMenu.Designer.cs">
-      <DependentUpon>FrmMainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQuanLyDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQuanLyDichVu.Designer.cs">
-      <DependentUpon>FrmQuanLyDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQuanLyNguoiDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQuanLyNguoiDung.Designer.cs">
-      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmQuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmQuanLyNhanVien.Designer.cs">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLyPhong.cs">
+    <Compile Include="FrmThanhToanLuongNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmQuanLyPhong.Designer.cs">
-      <DependentUpon>FrmQuanLyPhong.cs</DependentUpon>
+    <Compile Include="FrmThanhToanLuongNhanVien.Designer.cs">
+      <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLySinhVien.cs">
+    <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmQuanLySinhVien.Designer.cs">
-      <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
+    <Compile Include="FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYeucausuachua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYeucausuachua.Designer.cs">
+      <DependentUpon>FrmYeucausuachua.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDay.Designer.cs">
+      <DependentUpon>QuanLyDay.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DanhSachDangKy.resx">
       <DependentUpon>DanhSachDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDangKyPhong.resx">
       <DependentUpon>FrmDangKyPhong.cs</DependentUpon>
@@ -132,11 +123,14 @@
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmQuanLyNguoiDung.resx">
-      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLyNhanVien.resx">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThanhToanLuongNhanVien.resx">
+      <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -147,6 +141,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyDay.resx">
+      <DependentUpon>QuanLyDay.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

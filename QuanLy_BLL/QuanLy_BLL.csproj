@@ -42,10 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="NguoiDung_BL.cs" />
-    <Compile Include="NhanVien_BL.cs" />
+    <Compile Include="DangNhap_BL.cs" />
+    <Compile Include="DanhSachDangKy_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDay_BL.cs" />
+    <Compile Include="QuanLyNguoiDung_BL.cs" />
+    <Compile Include="QuanLyNhanVien_BL.cs" />
     <Compile Include="SinhVienDangKy_BL.cs" />
+    <Compile Include="ThanhToanLuongNhanVien_BL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuanLy_DAL\QuanLy_DAL.csproj">

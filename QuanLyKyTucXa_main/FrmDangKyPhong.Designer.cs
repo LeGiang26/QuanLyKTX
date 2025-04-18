@@ -32,7 +32,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDangky = new System.Windows.Forms.Button();
             this.cbLoaiuutien = new System.Windows.Forms.ComboBox();
-            this.cbMaphong = new System.Windows.Forms.ComboBox();
             this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.dtpNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.cbGioitinh = new System.Windows.Forms.ComboBox();
@@ -41,7 +40,6 @@
             this.txtTensv = new System.Windows.Forms.TextBox();
             this.txtMasv = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -77,6 +75,7 @@
             this.btnClose.TabIndex = 44;
             this.btnClose.Text = "Hủy bỏ";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDangky
             // 
@@ -93,6 +92,7 @@
             this.btnDangky.TabIndex = 43;
             this.btnDangky.Text = "Đăng ký";
             this.btnDangky.UseVisualStyleBackColor = false;
+            this.btnDangky.Click += new System.EventHandler(this.btnDangky_Click);
             // 
             // cbLoaiuutien
             // 
@@ -102,20 +102,11 @@
             "Hộ nghèo",
             "Gia đình thương binh liệt sĩ",
             "Du học sinh"});
-            this.cbLoaiuutien.Location = new System.Drawing.Point(576, 240);
+            this.cbLoaiuutien.Location = new System.Drawing.Point(576, 271);
             this.cbLoaiuutien.Margin = new System.Windows.Forms.Padding(4);
             this.cbLoaiuutien.Name = "cbLoaiuutien";
             this.cbLoaiuutien.Size = new System.Drawing.Size(160, 24);
             this.cbLoaiuutien.TabIndex = 42;
-            // 
-            // cbMaphong
-            // 
-            this.cbMaphong.FormattingEnabled = true;
-            this.cbMaphong.Location = new System.Drawing.Point(576, 200);
-            this.cbMaphong.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMaphong.Name = "cbMaphong";
-            this.cbMaphong.Size = new System.Drawing.Size(160, 24);
-            this.cbMaphong.TabIndex = 41;
             // 
             // cbKhoa
             // 
@@ -194,23 +185,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(438, 245);
+            this.label9.Location = new System.Drawing.Point(438, 277);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 18);
             this.label9.TabIndex = 53;
             this.label9.Text = "Loại ưu tiên";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(438, 205);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 18);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Mã phòng";
             // 
             // label7
             // 
@@ -298,7 +278,6 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDangky);
             this.Controls.Add(this.cbLoaiuutien);
-            this.Controls.Add(this.cbMaphong);
             this.Controls.Add(this.cbKhoa);
             this.Controls.Add(this.dtpNgaysinh);
             this.Controls.Add(this.cbGioitinh);
@@ -307,7 +286,6 @@
             this.Controls.Add(this.txtTensv);
             this.Controls.Add(this.txtMasv);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -328,7 +306,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDangky;
         private System.Windows.Forms.ComboBox cbLoaiuutien;
-        private System.Windows.Forms.ComboBox cbMaphong;
         private System.Windows.Forms.ComboBox cbKhoa;
         private System.Windows.Forms.DateTimePicker dtpNgaysinh;
         private System.Windows.Forms.ComboBox cbGioitinh;
@@ -337,7 +314,6 @@
         private System.Windows.Forms.TextBox txtTensv;
         private System.Windows.Forms.TextBox txtMasv;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

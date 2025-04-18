@@ -31,9 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
-            this.textBox1txtTaikhoan = new System.Windows.Forms.TextBox();
+            this.txtTaikhoan = new System.Windows.Forms.TextBox();
             this.btnDangnhap = new System.Windows.Forms.Button();
-            this.btnDangky = new System.Windows.Forms.Button();
+            this.cbQuyen = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +46,6 @@
             this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài Khoản";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -65,13 +65,13 @@
             this.txtMatkhau.Size = new System.Drawing.Size(306, 27);
             this.txtMatkhau.TabIndex = 3;
             // 
-            // textBox1txtTaikhoan
+            // txtTaikhoan
             // 
-            this.textBox1txtTaikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1txtTaikhoan.Location = new System.Drawing.Point(100, 202);
-            this.textBox1txtTaikhoan.Name = "textBox1txtTaikhoan";
-            this.textBox1txtTaikhoan.Size = new System.Drawing.Size(306, 27);
-            this.textBox1txtTaikhoan.TabIndex = 4;
+            this.txtTaikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaikhoan.Location = new System.Drawing.Point(100, 202);
+            this.txtTaikhoan.Name = "txtTaikhoan";
+            this.txtTaikhoan.Size = new System.Drawing.Size(306, 27);
+            this.txtTaikhoan.TabIndex = 4;
             // 
             // btnDangnhap
             // 
@@ -82,24 +82,35 @@
             this.btnDangnhap.TabIndex = 5;
             this.btnDangnhap.Text = "Đăng nhập";
             this.btnDangnhap.UseVisualStyleBackColor = true;
+            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
             // 
-            // btnDangky
+            // cbQuyen
             // 
-            this.btnDangky.Location = new System.Drawing.Point(299, 407);
-            this.btnDangky.Name = "btnDangky";
-            this.btnDangky.Size = new System.Drawing.Size(169, 31);
-            this.btnDangky.TabIndex = 6;
-            this.btnDangky.Text = "Đăng ký ở ký túc xá";
-            this.btnDangky.UseVisualStyleBackColor = true;
+            this.cbQuyen.FormattingEnabled = true;
+            this.cbQuyen.Location = new System.Drawing.Point(100, 130);
+            this.cbQuyen.Name = "cbQuyen";
+            this.cbQuyen.Size = new System.Drawing.Size(306, 24);
+            this.cbQuyen.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(100, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Quyền";
             // 
             // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 467);
-            this.Controls.Add(this.btnDangky);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbQuyen);
             this.Controls.Add(this.btnDangnhap);
-            this.Controls.Add(this.textBox1txtTaikhoan);
+            this.Controls.Add(this.txtTaikhoan);
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -115,9 +126,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMatkhau;
-        private System.Windows.Forms.TextBox textBox1txtTaikhoan;
+        private System.Windows.Forms.TextBox txtTaikhoan;
         private System.Windows.Forms.Button btnDangnhap;
-        private System.Windows.Forms.Button btnDangky;
+        private System.Windows.Forms.ComboBox cbQuyen;
+        private System.Windows.Forms.Label label3;
     }
 }
 

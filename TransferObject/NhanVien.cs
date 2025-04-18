@@ -14,23 +14,21 @@ namespace TransferObject
 
         public string gioitinh { get; set; }
 
-        public string diachi { get; set; }
-
         public string ngaysinh { get; set; }
+
+        public string diachi { get; set; }
 
         public string sodienthoai { get; set; }
 
-        public string hesoluong { get; set; }
 
-        public NhanVien(string maNV, string tenNV, string gioiTinh, string diaChi, string ngaySinh, string soDienThoai, string heSoLuong)
+        public NhanVien(string maNV, string tenNV, string gioiTinh, string ngaySinh, string diaChi,  string soDienThoai)
         {
             this.manv = maNV;
             this.tennv = tenNV;
             this.gioitinh = gioiTinh;
-            this.diachi = diaChi;
             this.ngaysinh = ngaySinh;
+            this.diachi = diaChi;
             this.sodienthoai = soDienThoai;
-            this.hesoluong = heSoLuong;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace QuanLy_DAL
 {
     public class DataProvider
     {
-            private SqlConnection cn;
+            public SqlConnection cn;
 
             public DataProvider()
             {
