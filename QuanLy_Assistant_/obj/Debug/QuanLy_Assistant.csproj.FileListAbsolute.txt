@@ -1,0 +1,30 @@
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_Assistant_.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_Assistant_.pdb
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\Newtonsoft.Json.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_BLL.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_DAL.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\TransferObject.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_BLL.pdb
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_DAL.pdb
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\TransferObject.pdb
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\bin\Debug\Newtonsoft.Json.xml
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant.csproj.AssemblyReference.cache
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant.csproj.CoreCompileInputs.cache
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_A.41D2CC89.Up2Date
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant_.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant_.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_Assistant_.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_Assistant_.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_BLL.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_DAL.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\TransferObject.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_BLL.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\QuanLy_DAL.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\TransferObject.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant.csproj.AssemblyReference.cache
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant.csproj.CoreCompileInputs.cache
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_A.41D2CC89.Up2Date
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant_.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_Assistant_\obj\Debug\QuanLy_Assistant_.pdb

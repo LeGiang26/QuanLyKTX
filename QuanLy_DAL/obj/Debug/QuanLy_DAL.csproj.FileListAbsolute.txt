@@ -1,0 +1,14 @@
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\bin\Debug\QuanLy_DAL.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\bin\Debug\QuanLy_DAL.pdb
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.csproj.AssemblyReference.cache
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.csproj.CoreCompileInputs.cache
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.csproj.Up2Date
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.dll
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\bin\Debug\QuanLy_DAL.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\bin\Debug\QuanLy_DAL.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.csproj.AssemblyReference.cache
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.csproj.CoreCompileInputs.cache
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.csproj.Up2Date
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.dll
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLy_DAL\obj\Debug\QuanLy_DAL.pdb

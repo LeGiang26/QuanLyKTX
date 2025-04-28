@@ -1,0 +1,51 @@
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\bin\Debug\QuanLyKyTucXa_main.exe.config
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\bin\Debug\QuanLyKyTucXa_main.exe
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\bin\Debug\QuanLyKyTucXa_main.pdb
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_GUI.csproj.AssemblyReference.cache
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.DanhSachDangKy.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmAdmin.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmChatBot.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmDangKyPhong.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmDangNhap.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmDoiMatKhau.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyKyLuat.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyNhanVien.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyPhong.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyThietBi.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyTienDien.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyTienNuoc.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmThanhToanLuongNhanVien.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmUser.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.Properties.Resources.resources
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_GUI.csproj.GenerateResource.cache
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_GUI.csproj.CoreCompileInputs.cache
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKy.EA852840.Up2Date
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.exe
+C:\Users\QUYEN\source\repos\LeGiang26\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\bin\Debug\QuanLyKyTucXa_main.exe.config
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\bin\Debug\QuanLyKyTucXa_main.exe
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\bin\Debug\QuanLyKyTucXa_main.pdb
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_GUI.csproj.AssemblyReference.cache
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.DanhSachDangKy.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmChatBot.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmDangKyPhong.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmDangNhap.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmDoiMatKhau.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmMainMenu.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmMenuUser.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyDay.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyKyLuat.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyNhanVien.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyPhong.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLySinhVien.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyThietBi.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyTienDien.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmQuanLyTienNuoc.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.FrmThanhToanLuongNhanVien.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.Properties.Resources.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.ThongKeTienDien.resources
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_GUI.csproj.GenerateResource.cache
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_GUI.csproj.CoreCompileInputs.cache
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKy.EA852840.Up2Date
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.exe
+C:\Users\LG\Desktop\CFs new\QuanLyKTX\QuanLyKyTucXa_main\obj\Debug\QuanLyKyTucXa_main.pdb
