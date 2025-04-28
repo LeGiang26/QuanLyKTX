@@ -10,79 +10,105 @@ namespace QuanLy_DAL
 {
     public class DataProvider
     {
-            public SqlConnection cn;
+        public SqlConnection cn;
 
-            public DataProvider()
-            {
-                // Link của chi, mn đổi cái khác nha
-                string cnStr = "Data Source=LAPTOP-MAMQ0DB1\\LION;Initial Catalog=QuanLyKyTucXa;Integrated Security=True";
-                cn = new SqlConnection(cnStr);
-            }
+        public DataProvider()
+        {
+            // Link của chi, mn đổi cái khác nha
+            string cnStr = "Data Source=LAPTOP-MAMQ0DB1\\LION;Initial Catalog=QuanLyKyTucXa;Integrated Security=True";
+            cn = new SqlConnection(cnStr);
+        }
 
-            public void Connect()
+        public void Connect()
+        {
+            try
             {
-                try
+                if (cn != null && cn.State == ConnectionState.Closed)
                 {
-                    if (cn != null && cn.State == ConnectionState.Closed)
-                    {
-                        cn.Open();
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    throw ex;
-                }
-
-            }
-            public void DisConnect()
-            {
-                try
-                {
-                    if (cn != null && cn.State == ConnectionState.Open)
-                    {
-                        cn.Close();
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    throw ex;
+                    cn.Open();
                 }
             }
-            public object MyExecuteScalar(string sql, CommandType type)
+            catch (SqlException ex)
             {
-                try
-                {
-                    Connect();
-                    SqlCommand cmd = new SqlCommand(sql, cn);
-                    cmd.CommandType = type;
-
-                    return (cmd.ExecuteScalar());
-                }
-                catch (SqlException ex)
-                {
-                    throw ex;
-                }
-                finally
-                {
-                    DisConnect();
-                }
+                throw ex;
             }
 
-            public SqlDataReader MyExecuteReader(string sql, CommandType type)
+        }
+        public void DisConnect()
+        {
+            try
             {
-                try
+                if (cn != null && cn.State == ConnectionState.Open)
                 {
-
-                    SqlCommand cmd = new SqlCommand(sql, cn);
-                    cmd.CommandType = type;
-
-                    return (cmd.ExecuteReader());
+                    cn.Close();
                 }
-                catch (SqlException ex)
-                {
-                    throw ex;
-                }
-
             }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        public object MyExecuteScalar(string sql, CommandType type)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+
+                return (cmd.ExecuteScalar());
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
+
+        public SqlDataReader MyExecuteReader(string sql, CommandType type)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+
+                return (cmd.ExecuteReader());
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        // Insert Update, Delete
+        public int MyExecuteNonQuery(string sql, CommandType type, List<SqlParameter> parameters = null)
+        {
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+
+                if(parameters != null)
+                {
+                    foreach (var parameter in parameters)
+                        cmd.Parameters.Add(parameter);
+                }
+
+                return cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
     }
 }

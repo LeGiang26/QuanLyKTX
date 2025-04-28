@@ -38,8 +38,8 @@ namespace QuanLy_DAL
             {
                 Connect(); // Mở kết nối từ lớp cha DataProvider
                 SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO SinhVienDangKy (masvdky, tensv, gioitinh, ngaysinh, quequan, khoa, lop, loaiuutien) " +
-                    "VALUES (@masvdky, @tensv, @gioitinh, @ngaysinh, @quequan, @khoa, @lop, @loaiuutien)",
+                    "INSERT INTO SinhVienDangKy (masvdky, tensv, gioitinh, ngaysinh, quequan, email, khoa, lop, loaiuutien) " +
+                    "VALUES (@masvdky, @tensv, @gioitinh, @ngaysinh, @quequan, @email, @khoa, @lop, @loaiuutien)",
                     cn // Sử dụng kết nối từ DataProvider
                 );
 
@@ -49,6 +49,7 @@ namespace QuanLy_DAL
                 cmd.Parameters.AddWithValue("@gioitinh", sv.gioitinh);
                 cmd.Parameters.AddWithValue("@ngaysinh", sv.ngaysinh);
                 cmd.Parameters.AddWithValue("@quequan", sv.quequan);
+                cmd.Parameters.AddWithValue("@email", sv.email);
                 cmd.Parameters.AddWithValue("@khoa", sv.khoa);
                 cmd.Parameters.AddWithValue("@lop", sv.lop);
                 cmd.Parameters.AddWithValue("@loaiuutien", sv.loaiuutien);

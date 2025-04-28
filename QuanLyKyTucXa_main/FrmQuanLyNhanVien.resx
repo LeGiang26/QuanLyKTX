@@ -121,7 +121,7 @@
   <data name="btnThem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        tAAAALQB65csewAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADOSURBVFhH7ZdB
+        sAAAALABFGqraQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADOSURBVFhH7ZdB
         CoMwEEW9TtujOMHJRR3pvvUA1V6jLkpvIC2/pFDGLERMdDEf/iZ+yBswmUxRLJA7uxMJ30l4DO6rpjrq
         XDKRcEvC73+72l91LpmoqR4aAGs6l0wkPEwAhAedSyYDMAADMIBVAUJjwd3+JOHXPHs0IAXwXYtko8Ze
         LfZGNehquppc7gAQqSabx10A9JEPWVwK3wq8ZPCY2OAnvJS1P+hDMUurHsMlMgADMAAD2B5gB6PZZDjF
@@ -144,6 +144,12 @@
     <value>True</value>
   </metadata>
   <metadata name="sodienthoai.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

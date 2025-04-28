@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLy_BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferObject;
 
 namespace QuanLyKyTucXa_main
 {
-    public partial class FrmYeucausuachua: Form
+    public partial class FrmChuyenPhong: Form
     {
-        public FrmYeucausuachua()
+
+        public FrmChuyenPhong()
         {
             InitializeComponent();
+        }
+
+
+
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

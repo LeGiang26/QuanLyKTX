@@ -35,6 +35,7 @@
             this.btnDangnhap = new System.Windows.Forms.Button();
             this.cbQuyen = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnDangky = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -102,11 +103,22 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Quyền";
             // 
+            // btnDangky
+            // 
+            this.btnDangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangky.Location = new System.Drawing.Point(249, 402);
+            this.btnDangky.Name = "btnDangky";
+            this.btnDangky.Size = new System.Drawing.Size(157, 43);
+            this.btnDangky.TabIndex = 9;
+            this.btnDangky.Text = "Đăng ký";
+            this.btnDangky.UseVisualStyleBackColor = true;
+            // 
             // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 467);
+            this.Controls.Add(this.btnDangky);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbQuyen);
             this.Controls.Add(this.btnDangnhap);
@@ -130,6 +142,7 @@
         private System.Windows.Forms.Button btnDangnhap;
         private System.Windows.Forms.ComboBox cbQuyen;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDangky;
     }
 }
 

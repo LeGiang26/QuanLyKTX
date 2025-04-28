@@ -32,6 +32,7 @@
             this.btnQuanLyNhanVien = new System.Windows.Forms.Button();
             this.btnQuanLyDay = new System.Windows.Forms.Button();
             this.btnDanhSachPhong = new System.Windows.Forms.Button();
+            this.btnQuanlynguoidung = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnThanhtoanluong
@@ -42,6 +43,7 @@
             this.btnThanhtoanluong.TabIndex = 9;
             this.btnThanhtoanluong.Text = "Thanh toán lương nhân viên";
             this.btnThanhtoanluong.UseVisualStyleBackColor = true;
+            this.btnThanhtoanluong.Click += new System.EventHandler(this.btnThanhtoanluong_Click);
             // 
             // btnQuanLyNhanVien
             // 
@@ -51,15 +53,17 @@
             this.btnQuanLyNhanVien.TabIndex = 8;
             this.btnQuanLyNhanVien.Text = "Quản Lý Nhân Viên";
             this.btnQuanLyNhanVien.UseVisualStyleBackColor = true;
+            this.btnQuanLyNhanVien.Click += new System.EventHandler(this.btnQuanLyNhanVien_Click);
             // 
             // btnQuanLyDay
             // 
-            this.btnQuanLyDay.Location = new System.Drawing.Point(334, 244);
+            this.btnQuanLyDay.Location = new System.Drawing.Point(158, 96);
             this.btnQuanLyDay.Name = "btnQuanLyDay";
             this.btnQuanLyDay.Size = new System.Drawing.Size(157, 71);
             this.btnQuanLyDay.TabIndex = 7;
             this.btnQuanLyDay.Text = "Quản lý dãy";
             this.btnQuanLyDay.UseVisualStyleBackColor = true;
+            this.btnQuanLyDay.Click += new System.EventHandler(this.btnQuanLyDay_Click);
             // 
             // btnDanhSachPhong
             // 
@@ -69,12 +73,23 @@
             this.btnDanhSachPhong.TabIndex = 6;
             this.btnDanhSachPhong.Text = "Danh Sách Phòng";
             this.btnDanhSachPhong.UseVisualStyleBackColor = true;
+            this.btnDanhSachPhong.Click += new System.EventHandler(this.btnDanhSachPhong_Click);
+            // 
+            // btnQuanlynguoidung
+            // 
+            this.btnQuanlynguoidung.Location = new System.Drawing.Point(347, 221);
+            this.btnQuanlynguoidung.Name = "btnQuanlynguoidung";
+            this.btnQuanlynguoidung.Size = new System.Drawing.Size(157, 71);
+            this.btnQuanlynguoidung.TabIndex = 10;
+            this.btnQuanlynguoidung.Text = "Quản Lý Người Dùng";
+            this.btnQuanlynguoidung.UseVisualStyleBackColor = true;
             // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 512);
+            this.Controls.Add(this.btnQuanlynguoidung);
             this.Controls.Add(this.btnThanhtoanluong);
             this.Controls.Add(this.btnQuanLyNhanVien);
             this.Controls.Add(this.btnQuanLyDay);
@@ -91,5 +106,6 @@
         private System.Windows.Forms.Button btnQuanLyNhanVien;
         private System.Windows.Forms.Button btnQuanLyDay;
         private System.Windows.Forms.Button btnDanhSachPhong;
+        private System.Windows.Forms.Button btnQuanlynguoidung;
     }
 }

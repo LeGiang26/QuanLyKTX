@@ -58,6 +58,12 @@
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChuyenPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChuyenPhong.Designer.cs">
+      <DependentUpon>FrmChuyenPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDangKyPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +82,23 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmQuanLyNhanVien.Designer.cs">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaNhanVien.Designer.cs">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThanhToanLuongNhanVien.cs">
       <SubType>Form</SubType>
@@ -88,17 +106,11 @@
     <Compile Include="FrmThanhToanLuongNhanVien.Designer.cs">
       <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUser.cs">
+    <Compile Include="FrmThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUser.Designer.cs">
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmYeucausuachua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmYeucausuachua.Designer.cs">
-      <DependentUpon>FrmYeucausuachua.cs</DependentUpon>
+    <Compile Include="FrmThemNhanVien.Designer.cs">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +126,9 @@
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmChuyenPhong.resx">
+      <DependentUpon>FrmChuyenPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDangKyPhong.resx">
       <DependentUpon>FrmDangKyPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,14 +138,20 @@
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyNguoiDung.resx">
+      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLyNhanVien.resx">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaNhanVien.resx">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmThanhToanLuongNhanVien.resx">
       <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUser.resx">
-      <DependentUpon>FrmUser.cs</DependentUpon>
+    <EmbeddedResource Include="FrmThemNhanVien.resx">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

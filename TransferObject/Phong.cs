@@ -10,15 +10,15 @@ namespace TransferObject
     {
         public string maphong { get; set; }
         public string tenphong { get; set; }
-        public string sosv { get; set; }
-        public string sosvtoida { get; set; }
+        public int sosv { get; set; }
+        public int sosvtoida { get; set; }
         public string tinhtrang { get; set; }
         public string loaiphong { get; set; }
         public string xeploai { get; set; }
         public string day { get; set; }
         public string chisocu { get; set; }
 
-        public  Phong (string maPhong, string tenPhong, string soSV, string soSVToiDa, 
+        public  Phong (string maPhong, string tenPhong, int soSV, int soSVToiDa, 
             string tinhTrang, string loaiPhong, string xepLoai, string Day, string chiSoCu)
         {
             this.maphong=maPhong;

@@ -45,86 +45,65 @@ namespace QuanLy_DAL
             }
         }
 
-        public bool ThemNhanVien(NhanVien nv)
+        public int ThemNhanVien(NhanVien nv)
         {
-            string sql = "INSERT INTO NhanVien VALUES(@manv, @tennv, @gioitinh, @ngaysinh, @diachi, @sodienthoai)";
+            string sql = "uspThemNhanVien";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@manv", nv.manv));
+            parameters.Add(new SqlParameter("@tennv", nv.tennv));
+            parameters.Add(new SqlParameter("@gioitinh", nv.gioitinh));
+            parameters.Add(new SqlParameter("@ngaysinh", DateTime.Parse(nv.ngaysinh)));
+            parameters.Add(new SqlParameter("@diachi", nv.diachi));
+            parameters.Add(new SqlParameter("@sodienthoai", nv.sodienthoai));
+
             try
             {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@manv", nv.manv);
-                cmd.Parameters.AddWithValue("@tennv", nv.tennv);
-                cmd.Parameters.AddWithValue("@gioitinh", nv.gioitinh);
-                cmd.Parameters.AddWithValue("@ngaysinh", DateTime.Parse(nv.ngaysinh));
-                cmd.Parameters.AddWithValue("@diachi", nv.diachi);
-                cmd.Parameters.AddWithValue("@sodienthoai", nv.sodienthoai);
-                cmd.ExecuteNonQuery();
-                return true;
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
-            finally
-            {
-                DisConnect();
-            }
+            
         }
-        public bool SuaNhanVien(NhanVien nv)
+
+        public int XoaNhanVien(string manv)
         {
-            string sql = @"UPDATE NhanVien 
-                  SET tennv = @tennv, 
-                      gioitinh = @gioitinh, 
-                      ngaysinh = @ngaysinh, 
-                      diachi = @diachi, 
-                      sodienthoai = @sodienthoai 
-                  WHERE manv = @manv";
+            string sql = "uspXoaNhanVien";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@manv", manv));
+
             try
             {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@manv", nv.manv);
-                cmd.Parameters.AddWithValue("@tennv", nv.tennv);
-                cmd.Parameters.AddWithValue("@gioitinh", nv.gioitinh);
-                cmd.Parameters.AddWithValue("@ngaysinh", DateTime.Parse(nv.ngaysinh));
-                cmd.Parameters.AddWithValue("@diachi", nv.diachi);
-                cmd.Parameters.AddWithValue("@sodienthoai", nv.sodienthoai);
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
             }
             catch (SqlException ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                DisConnect();
             }
         }
 
-        public bool XoaNhanVien(string manv)
+        public int CapNhapNhanVien(NhanVien nv)
         {
-            string sql = "DELETE FROM NhanVien WHERE manv = @manv";
+            string sql = "uspCapNhapNhanVien";
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@manv", nv.manv));
+            parameters.Add(new SqlParameter("@tennv", nv.tennv));
+            parameters.Add(new SqlParameter("@gioitinh", nv.gioitinh));
+            parameters.Add(new SqlParameter("@ngaysinh", DateTime.Parse(nv.ngaysinh)));
+            parameters.Add(new SqlParameter("@diachi", nv.diachi));
+            parameters.Add(new SqlParameter("@sodienthoai", nv.sodienthoai));
+
             try
             {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@manv", manv);
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
+                return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters);
             }
             catch (SqlException ex)
             {
-                // Xử lý ràng buộc khóa ngoại
-                if (ex.Number == 547)
-                    throw new Exception("Không thể xóa nhân viên đang có thông tin liên quan!");
                 throw ex;
             }
-            finally
-            {
-                DisConnect();
-            }
         }
+
         public List<NhanVien> TimKiemNhanVien(string keyword, bool timTheoMa)
         {
             List<NhanVien> nhanViens = new List<NhanVien>();
@@ -165,6 +144,5 @@ namespace QuanLy_DAL
                 DisConnect();
             }
         }
-
     }
 }

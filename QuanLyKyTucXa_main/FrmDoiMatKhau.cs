@@ -21,5 +21,10 @@ namespace QuanLyKyTucXa_main
         {
 
         }
+
+        private void btnXacnhan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

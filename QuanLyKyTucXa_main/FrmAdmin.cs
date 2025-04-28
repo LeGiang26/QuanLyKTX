@@ -17,35 +17,28 @@ namespace QuanLyKyTucXa_main
             InitializeComponent();
         }
 
-        private void btnDangKyPhong_Click(object sender, EventArgs e)
-        {
-            FrmDangKyPhong frmDangKyPhong = new FrmDangKyPhong();
-            frmDangKyPhong.ShowDialog();
-        }
-
-        private void btnDanhSachPhong_Click(object sender, EventArgs e)
-        {
-            DanhSachDangKy danhSachDangKy = new DanhSachDangKy();
-            danhSachDangKy.ShowDialog();
-        }
-
         private void btnQuanLyDay_Click(object sender, EventArgs e)
         {
             FrmQuanLyDay quanLyDay = new FrmQuanLyDay();
-            quanLyDay.ShowDialog();
+            quanLyDay.Show();
         }
 
         private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
         {
             FrmQuanLyNhanVien quanLyNhanVien = new FrmQuanLyNhanVien();
-            quanLyNhanVien.ShowDialog();
+            quanLyNhanVien.Show();
         }
 
         private void btnThanhtoanluong_Click(object sender, EventArgs e)
         {
             FrmThanhToanLuongNhanVien thanhToanLuongNhanVien = new FrmThanhToanLuongNhanVien();
-            thanhToanLuongNhanVien.ShowDialog();
+            thanhToanLuongNhanVien.Show();
         }
 
+        private void btnDanhSachPhong_Click(object sender, EventArgs e)
+        {
+            DanhSachDangKy danhSachDangKy = new DanhSachDangKy();
+            danhSachDangKy.Show();
+        }
     }
 }

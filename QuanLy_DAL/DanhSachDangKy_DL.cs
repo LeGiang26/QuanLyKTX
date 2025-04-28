@@ -14,7 +14,7 @@ namespace QuanLy_DAL
         // Tải Danh sách lên để chờ duyệt
         public List<SinhVienDangKy> LayDSSinhVienDangKy()
         {
-            string masvdky, tensv, gioitinh, ngaysinh, quequan, khoa, lop, loaiuutien;
+            string masvdky, tensv, gioitinh, ngaysinh, quequan, email, khoa, lop, loaiuutien;
             List<SinhVienDangKy> sinhVienDangKys = new List<SinhVienDangKy>();
             string sql = "SELECT * FROM SinhVienDangKy";
             try
@@ -28,11 +28,12 @@ namespace QuanLy_DAL
                     gioitinh = reader[2].ToString();
                     ngaysinh = reader[3].ToString();
                     quequan = reader[4].ToString();
-                    khoa = reader[5].ToString();
-                    lop = reader[6].ToString();
-                    loaiuutien = reader[7].ToString();
+                    email = reader[5].ToString();
+                    khoa = reader[6].ToString();
+                    lop = reader[7].ToString();
+                    loaiuutien = reader[8].ToString();
 
-                    SinhVienDangKy sinhVienDangKy = new SinhVienDangKy(masvdky, tensv, gioitinh, ngaysinh, quequan, khoa, lop, loaiuutien);
+                    SinhVienDangKy sinhVienDangKy = new SinhVienDangKy(masvdky, tensv, gioitinh, ngaysinh, quequan, email,  khoa, lop, loaiuutien);
                     sinhVienDangKys.Add(sinhVienDangKy);
                 }
                 reader.Close();
@@ -51,7 +52,7 @@ namespace QuanLy_DAL
         // Tải danh sách sinh viên đăng đã được duyệt rồi
         public List<SinhVien> LayDSSinhVien()
         {
-            string masv, tensv, gioitinh, ngaysinh, quequan, khoa, lop, loaiuutien, maphong;
+            string masv, tensv, gioitinh, ngaysinh, quequan, email, khoa, lop, loaiuutien, maphong;
             List<SinhVien> sinhViens = new List<SinhVien>();
             string sql = "SELECT * FROM SinhVien";
             try
@@ -65,139 +66,17 @@ namespace QuanLy_DAL
                     gioitinh = reader[2].ToString();
                     ngaysinh = reader[3].ToString();
                     quequan = reader[4].ToString();
-                    khoa = reader[5].ToString();
-                    lop = reader[6].ToString();
-                    loaiuutien = reader[7].ToString();
-                    maphong = reader[8].ToString();
+                    email = reader[5].ToString();
+                    khoa = reader[6].ToString();
+                    lop = reader[7].ToString();
+                    loaiuutien = reader[8].ToString();
+                    maphong = reader[9].ToString();
 
-                    SinhVien sinhVien = new SinhVien(masv, tensv, gioitinh, ngaysinh, quequan, khoa, lop, loaiuutien, maphong);
+                    SinhVien sinhVien = new SinhVien(masv, tensv, gioitinh, ngaysinh, quequan, email, khoa, lop, loaiuutien, maphong);
                     sinhViens.Add(sinhVien);
                 }
                 reader.Close();
                 return sinhViens;
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                DisConnect();
-            }
-        }
-
-        private List<Phong> LayDSPhongTheoDieuKien(string sql)
-        {
-            List<Phong> dsPhong = new List<Phong>();
-            try
-            {
-                Connect();
-                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
-                while (reader.Read())
-                {
-                    string maphong = reader["maphong"].ToString();
-                    string tenphong = reader["tenphong"].ToString();
-                    string sosv = reader["sosv"].ToString();
-                    string sosvtoida = reader["sosvtoida"].ToString();
-                    string tinhtrang = reader["tinhtrang"].ToString();
-                    string loaiphong = reader["loaiphong"].ToString();
-                    string xeploai = reader["xeploai"].ToString();
-                    string day = reader["day"].ToString();
-                    string chisocu = reader["chisocu"].ToString();
-
-                    Phong phong = new Phong(maphong, tenphong, sosv, sosvtoida, tinhtrang, loaiphong, xeploai, day, chisocu);
-                    dsPhong.Add(phong);
-                }
-                reader.Close();
-                return dsPhong;
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                DisConnect();
-            }
-        }
-
-        // Lấy Danh sách phòng của Nam
-        public List<Phong> LayDSPhongTrongNam()
-        {
-            List<Phong> dsPhongNam = new List<Phong>();
-            string sql = "SELECT * FROM Phong WHERE loaiphong = N'Nam' AND sosv < sosvtoida";
-            return LayDSPhongTheoDieuKien(sql);
-        }
-
-        // Lấy Danh sách phòng của Nữ
-        public List<Phong> LayDSPhongTrongNu()
-        {
-            List<Phong> dsPhongNu = new List<Phong>();
-            string sql = "SELECT * FROM Phong WHERE loaiphong = N'Nữ' AND sosv < sosvtoida";
-            return LayDSPhongTheoDieuKien(sql);
-        }
-
-        public bool ThemSinhVien(SinhVien sv)
-        {
-            string sql = @"INSERT INTO SinhVien (masv, tensv, gioitinh, ngaysinh, quequan, khoa, lop, loaiuutien, maphong) 
-                  VALUES (@masv, @tensv, @gioitinh, @ngaysinh, @quequan, @khoa, @lop, @loaiuutien, @maphong)";
-            try
-            {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@masv", sv.masv);
-                cmd.Parameters.AddWithValue("@tensv", sv.tensv);
-                cmd.Parameters.AddWithValue("@gioitinh", sv.gioitinh);
-                cmd.Parameters.AddWithValue("@ngaysinh", sv.ngaysinh);
-                cmd.Parameters.AddWithValue("@quequan", sv.quequan);
-                cmd.Parameters.AddWithValue("@khoa", sv.khoa);
-                cmd.Parameters.AddWithValue("@lop", sv.lop);
-                cmd.Parameters.AddWithValue("@loaiuutien", sv.loaiuutien);
-                cmd.Parameters.AddWithValue("@maphong", sv.maphong);
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                DisConnect();
-            }
-        }
-
-        public bool XoaSinhVienDangKy(string masv)
-        {
-            string sql = "DELETE FROM SinhVienDangKy WHERE masvdky = @masv";
-            try
-            {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@masv", masv);
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                DisConnect();
-            }
-        }
-
-        public bool CapNhatSoSVPhong(string maPhong)
-        {
-            string sql = "UPDATE Phong SET sosv = sosv + 1 WHERE maphong = @maphong";
-            try
-            {
-                Connect();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@maphong", maPhong);
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
             }
             catch (SqlException ex)
             {
@@ -216,6 +95,7 @@ namespace QuanLy_DAL
                        gioitinh = @gioitinh, 
                        ngaysinh = @ngaysinh, 
                        quequan = @quequan, 
+                       email = @email,
                        khoa = @khoa, 
                        lop = @lop, 
                        loaiuutien = @loaiuutien 
@@ -229,6 +109,7 @@ namespace QuanLy_DAL
                 cmd.Parameters.AddWithValue("@gioitinh", sv.gioitinh);
                 cmd.Parameters.AddWithValue("@ngaysinh", sv.ngaysinh);
                 cmd.Parameters.AddWithValue("@quequan", sv.quequan);
+                cmd.Parameters.AddWithValue("@email", sv.email);
                 cmd.Parameters.AddWithValue("@khoa", sv.khoa);
                 cmd.Parameters.AddWithValue("@lop", sv.lop);
                 cmd.Parameters.AddWithValue("@loaiuutien", sv.loaiuutien);
@@ -244,6 +125,122 @@ namespace QuanLy_DAL
                 DisConnect();
             }
         }
+
+        public void ThemSinhVien(SinhVien sv)
+        {
+            string sql = @"INSERT INTO SinhVien 
+                        VALUES (@masv, @tensv, @gioitinh, @ngaysinh, 
+                                @quequan, @email, @khoa, @lop, 
+                                @loaiuutien, @maphong)";
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@masv", sv.masv);
+                cmd.Parameters.AddWithValue("@tensv", sv.tensv);
+                cmd.Parameters.AddWithValue("@gioitinh", sv.gioitinh);
+                cmd.Parameters.AddWithValue("@ngaysinh", sv.ngaysinh);
+                cmd.Parameters.AddWithValue("@quequan", sv.quequan);
+                cmd.Parameters.AddWithValue("@email", sv.email);
+                cmd.Parameters.AddWithValue("@khoa", sv.khoa);
+                cmd.Parameters.AddWithValue("@lop", sv.lop);
+                cmd.Parameters.AddWithValue("@loaiuutien", sv.loaiuutien);
+                cmd.Parameters.AddWithValue("@maphong", sv.maphong);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex) { throw ex; }
+            finally { DisConnect(); }
+        }
+
+        public void XoaSinhVienDangKy(string masvdky)
+        {
+            string sql = "DELETE FROM SinhVienDangKy WHERE masvdky = @masvdky";
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@masvdky", masvdky);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex) { throw ex; }
+            finally { DisConnect(); }
+        }
+
+        public List<Phong> LayPhongTheoDieuKien(string gioiTinh, string khoa, string tinhTrang)
+        {
+            List<Phong> phongs = new List<Phong>();
+            string sql = @"SELECT * FROM Phong 
+                         WHERE loaiphong = @gioiTinh 
+                           AND tinhtrang = @tinhTrang";
+
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@gioiTinh", gioiTinh);
+                cmd.Parameters.AddWithValue("@tinhTrang", tinhTrang);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    // Parse dữ liệu từ SQL sang int
+                    int sosv = Convert.ToInt32(reader["sosv"]);
+                    int sosvtoida = Convert.ToInt32(reader["sosvtoida"]);
+                    Phong phong = new Phong(
+                        reader["maphong"].ToString(),
+                        reader["tenphong"].ToString(),
+                        sosv,
+                        sosvtoida,
+                        reader["tinhtrang"].ToString(),
+                        reader["loaiphong"].ToString(),
+                        reader["xeploai"].ToString(),
+                        reader["day"].ToString(),
+                        reader["chisocu"].ToString()
+                    );
+                    phongs.Add(phong);
+                }
+                reader.Close();
+                return phongs;
+            }
+            catch (SqlException ex) { throw ex; }
+            finally { DisConnect(); }
+        }
+
+        public void CapNhatSoSV(string maPhong)
+        {
+            string sql = @"UPDATE Phong 
+                   SET sosv = sosv + 1,
+                       tinhtrang = CASE 
+                          WHEN (sosv + 1) >= sosvtoida THEN N'Đủ'
+                          ELSE N'Thiếu' END
+                   WHERE maphong = @maPhong";
+            try
+            {
+                DataProvider provider = new DataProvider();
+                provider.Connect();
+                SqlCommand cmd = new SqlCommand(sql, provider.cn);
+                cmd.Parameters.AddWithValue("@maPhong", maPhong);
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex) { throw ex; }
+            finally { DisConnect(); }
+        }
+
+        public int LaySoSVHienTai(string maPhong)
+        {
+            string sql = "SELECT sosv FROM Phong WHERE maphong = @maPhong";
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("@maPhong", maPhong);
+                object result = cmd.ExecuteScalar();
+                return Convert.ToInt32(result);
+            }
+            catch (SqlException ex) { throw ex; }
+            finally { DisConnect(); }
+        }
+
+        
     }
 }
 

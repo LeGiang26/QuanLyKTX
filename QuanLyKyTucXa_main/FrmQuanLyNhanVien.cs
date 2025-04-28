@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Windows.Forms;
 using QuanLy_BLL;
 using TransferObject;
@@ -21,114 +21,30 @@ namespace QuanLyKyTucXa_main
             InitializeComponent();
             quanLyNhanVien_BL = new QuanLyNhanVien_BL();
         }
+
+        private void LoadNhanViens()
+        {
+            try
+            {
+                dgvNhanvien.DataSource = quanLyNhanVien_BL.LayDanhSachNhanVien();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void FrmQuanLyNhanVien_Load(object sender, EventArgs e)
         {
-            dgvNhanvien.DataSource = quanLyNhanVien_BL.LayDanhSachNhanVien();
+            LoadNhanViens();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
+            FrmThemNhanVien frmThemNhanVien = new FrmThemNhanVien();
+            DialogResult result = frmThemNhanVien.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                // Kiểm tra dữ liệu nhập
-                if (string.IsNullOrEmpty(txtManv.Text))
-                    throw new Exception("Mã NV không được trống");
-                if (string.IsNullOrEmpty(txtTennv.Text))
-                    throw new Exception("Tên NV không được trống");
-                // Thêm các điều kiện kiểm tra khác...
-
-                // Tạo đối tượng nhân viên
-                NhanVien nv = new NhanVien(
-                    txtManv.Text,
-                    txtTennv.Text,
-                    cbGioitinh.Text,
-                    dtpNgaysinh.Value.ToString("yyyy-MM-dd"),
-                    txtDiachi.Text,
-                    txtSodienthoai.Text
-                );
-
-                // Gọi BLL để thêm
-                bool result = quanLyNhanVien_BL.ThemNhanVien(nv);
-
-                if (result)
-                {
-                    MessageBox.Show("Thêm thành công!");
-                    // Cập nhật lại DataGridView
-                    dgvNhanvien.DataSource = quanLyNhanVien_BL.LayDanhSachNhanVien();
-
-                    // Xóa trắng các ô nhập
-                    ClearControls();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(txtManv.Text))
-                    throw new Exception("Vui lòng chọn nhân viên cần sửa!");
-
-                // Tạo đối tượng nhân viên
-                NhanVien nv = new NhanVien(
-                    txtManv.Text,
-                    txtTennv.Text,
-                    cbGioitinh.Text,
-                    dtpNgaysinh.Value.ToString("yyyy-MM-dd"),
-                    txtDiachi.Text,
-                    txtSodienthoai.Text
-                );
-
-                // Gọi BLL để sửa
-                bool result = quanLyNhanVien_BL.SuaNhanVien(nv);
-
-                if (result)
-                {
-                    MessageBox.Show("Cập nhật thành công!");
-                    dgvNhanvien.DataSource = quanLyNhanVien_BL.LayDanhSachNhanVien();
-                    // Xóa trắng các ô nhập (tùy chọn)
-                    ClearControls();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(txtManv.Text))
-                    throw new Exception("Vui lòng chọn nhân viên cần xóa!");
-
-                // Xác nhận xóa
-                DialogResult confirm = MessageBox.Show(
-                    "Bạn có chắc chắn muốn xóa nhân viên này?",
-                    "Xác nhận",
-                    MessageBoxButtons.YesNo
-                );
-
-                if (confirm != DialogResult.Yes) return;
-
-                // Gọi BLL để xóa
-                bool result = quanLyNhanVien_BL.XoaNhanVien(txtManv.Text);
-
-                if (result)
-                {
-                    MessageBox.Show("Xóa thành công!");
-                    dgvNhanvien.DataSource = quanLyNhanVien_BL.LayDanhSachNhanVien();
-                    ClearControls();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                LoadNhanViens();
             }
         }
 
@@ -161,28 +77,68 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void dgvNhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNhanvien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            // Xử lý cả nút Xóa và Sửa
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvNhanvien.Rows[e.RowIndex];
-                txtManv.Text = row.Cells["manv"].Value.ToString();
-                txtTennv.Text = row.Cells["tennv"].Value.ToString();
-                cbGioitinh.Text = row.Cells["gioitinh"].Value.ToString();
-                dtpNgaysinh.Value = DateTime.Parse(row.Cells["ngaysinh"].Value.ToString());
-                txtDiachi.Text = row.Cells["diachi"].Value.ToString();
-                txtSodienthoai.Text = row.Cells["sodienthoai"].Value.ToString();
+                // Xử lý nút Sửa (Column2 là cột sửa)
+                if (e.ColumnIndex == 1) // Giả sử Column2 là cột thứ 6
+                {
+                    // Lấy dữ liệu từ hàng được chọn
+                    DataGridViewRow row = dgvNhanvien.Rows[e.RowIndex];
+                    NhanVien nv = new NhanVien(
+                        row.Cells["manv"].Value.ToString(),
+                        row.Cells["tennv"].Value.ToString(),
+                        row.Cells["gioitinh"].Value.ToString(),
+                        row.Cells["ngaysinh"].Value.ToString(),
+                        row.Cells["diachi"].Value.ToString(),
+                        row.Cells["sodienthoai"].Value.ToString()
+                    );
+
+                    // Mở form sửa và truyền dữ liệu
+                    FrmSuaNhanVien frmSua = new FrmSuaNhanVien(nv);
+                    if (frmSua.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadNhanViens(); // Cập nhật lại DataGridView
+                    }
+                }
+                // Xử lý nút Xóa (giữ nguyên phần xử lý xóa đã có)
+                else if (e.ColumnIndex == 0)
+                {
+                    // Lấy mã nhân viên từ hàng được chọn
+                    string manv = dgvNhanvien.Rows[e.RowIndex].Cells["manv"].Value.ToString();
+
+                    // Xác nhận xóa
+                    DialogResult result = MessageBox.Show(
+                        "Bạn có chắc chắn muốn xóa nhân viên này?",
+                        "Xác nhận xóa",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning
+                    );
+
+                    if (result == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            int rowsAffected = quanLyNhanVien_BL.XoaNhanVien(manv);
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Xóa nhân viên thành công!");
+                                LoadNhanViens(); // Tải lại danh sách
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không tìm thấy nhân viên để xóa!");
+                            }
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("Lỗi khi xóa: " + ex.Message);
+                        }
+                    }
+                }
             }
-        }
-        // Phương thức xóa trắng control
-        private void ClearControls()
-        {
-            txtManv.Clear();
-            txtTennv.Clear();
-            cbGioitinh.SelectedIndex = -1;
-            dtpNgaysinh.Value = DateTime.Now;
-            txtDiachi.Clear();
-            txtSodienthoai.Clear();
         }
     }
 }
