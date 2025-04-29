@@ -271,6 +271,7 @@
             this.btnDong.TabIndex = 81;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // txtMaphong
             // 
@@ -294,11 +295,6 @@
             // cbMaphong
             // 
             this.cbMaphong.FormattingEnabled = true;
-            this.cbMaphong.Items.AddRange(new object[] {
-            "Bình thường",
-            "Hộ nghèo",
-            "Gia đình thương binh liệt sĩ",
-            "Du học sinh"});
             this.cbMaphong.Location = new System.Drawing.Point(1034, 158);
             this.cbMaphong.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaphong.Name = "cbMaphong";

@@ -40,5 +40,11 @@ namespace QuanLyKyTucXa_main
             DanhSachDangKy danhSachDangKy = new DanhSachDangKy();
             danhSachDangKy.Show();
         }
+
+        private void btnGuimaiThongbao_Click(object sender, EventArgs e)
+        {
+            FrmThongBaoSinhVien frmThongBaoSinhVien =  new FrmThongBaoSinhVien();
+            frmThongBaoSinhVien.Show();
+        }
     }
 }

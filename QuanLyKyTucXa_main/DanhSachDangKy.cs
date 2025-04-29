@@ -133,7 +133,34 @@ namespace QuanLyKyTucXa_main
 
         private void dgvSVDaDuyet_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            // Kiểm tra xem có phải click vào cột "Chuyển phòng" (Column2) không
+            if (e.ColumnIndex == dgvSVDaDuyet.Columns["Column2"].Index && e.RowIndex >= 0)
+            {
+                // Lấy dữ liệu từ hàng được chọn
+                DataGridViewRow row = dgvSVDaDuyet.Rows[e.RowIndex];
+
+                // Tạo form FrmChuyenPhong và truyền dữ liệu
+                FrmChuyenPhong frm = new FrmChuyenPhong();
+                frm.SetThongTinSinhVien(
+                    row.Cells["masvdky"].Value.ToString(),
+                    row.Cells["tensv"].Value.ToString(),
+                    row.Cells["gioitinh"].Value.ToString(),
+                    row.Cells["ngaysinh"].Value.ToString(),
+                    row.Cells["quequan"].Value.ToString(),
+                    row.Cells["dgvtbcEmail"].Value.ToString(),
+                    row.Cells["khoa"].Value.ToString(),
+                    row.Cells["lop"].Value.ToString(),
+                    row.Cells["loaiuutien"].Value.ToString(),
+                    row.Cells["maphong"].Value.ToString()
+                );
+
+                frm.ShowDialog(); // Hiển thị form
+            }
+        }
+
+        private void dgvSVDaDuyet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

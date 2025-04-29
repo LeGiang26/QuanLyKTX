@@ -33,11 +33,12 @@
             this.btnQuanLyDay = new System.Windows.Forms.Button();
             this.btnDanhSachPhong = new System.Windows.Forms.Button();
             this.btnQuanlynguoidung = new System.Windows.Forms.Button();
+            this.btnGuimaiThongbao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnThanhtoanluong
             // 
-            this.btnThanhtoanluong.Location = new System.Drawing.Point(529, 346);
+            this.btnThanhtoanluong.Location = new System.Drawing.Point(539, 181);
             this.btnThanhtoanluong.Name = "btnThanhtoanluong";
             this.btnThanhtoanluong.Size = new System.Drawing.Size(157, 71);
             this.btnThanhtoanluong.TabIndex = 9;
@@ -47,7 +48,7 @@
             // 
             // btnQuanLyNhanVien
             // 
-            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(177, 346);
+            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(539, 332);
             this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
             this.btnQuanLyNhanVien.Size = new System.Drawing.Size(157, 71);
             this.btnQuanLyNhanVien.TabIndex = 8;
@@ -57,7 +58,7 @@
             // 
             // btnQuanLyDay
             // 
-            this.btnQuanLyDay.Location = new System.Drawing.Point(158, 96);
+            this.btnQuanLyDay.Location = new System.Drawing.Point(49, 55);
             this.btnQuanLyDay.Name = "btnQuanLyDay";
             this.btnQuanLyDay.Size = new System.Drawing.Size(157, 71);
             this.btnQuanLyDay.TabIndex = 7;
@@ -67,7 +68,7 @@
             // 
             // btnDanhSachPhong
             // 
-            this.btnDanhSachPhong.Location = new System.Drawing.Point(542, 96);
+            this.btnDanhSachPhong.Location = new System.Drawing.Point(282, 55);
             this.btnDanhSachPhong.Name = "btnDanhSachPhong";
             this.btnDanhSachPhong.Size = new System.Drawing.Size(157, 71);
             this.btnDanhSachPhong.TabIndex = 6;
@@ -77,18 +78,29 @@
             // 
             // btnQuanlynguoidung
             // 
-            this.btnQuanlynguoidung.Location = new System.Drawing.Point(347, 221);
+            this.btnQuanlynguoidung.Location = new System.Drawing.Point(539, 55);
             this.btnQuanlynguoidung.Name = "btnQuanlynguoidung";
             this.btnQuanlynguoidung.Size = new System.Drawing.Size(157, 71);
             this.btnQuanlynguoidung.TabIndex = 10;
             this.btnQuanlynguoidung.Text = "Quản Lý Người Dùng";
             this.btnQuanlynguoidung.UseVisualStyleBackColor = true;
             // 
+            // btnGuimaiThongbao
+            // 
+            this.btnGuimaiThongbao.Location = new System.Drawing.Point(49, 181);
+            this.btnGuimaiThongbao.Name = "btnGuimaiThongbao";
+            this.btnGuimaiThongbao.Size = new System.Drawing.Size(161, 71);
+            this.btnGuimaiThongbao.TabIndex = 11;
+            this.btnGuimaiThongbao.Text = "Gửi mail thông báo";
+            this.btnGuimaiThongbao.UseVisualStyleBackColor = true;
+            this.btnGuimaiThongbao.Click += new System.EventHandler(this.btnGuimaiThongbao_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 512);
+            this.Controls.Add(this.btnGuimaiThongbao);
             this.Controls.Add(this.btnQuanlynguoidung);
             this.Controls.Add(this.btnThanhtoanluong);
             this.Controls.Add(this.btnQuanLyNhanVien);
@@ -107,5 +119,6 @@
         private System.Windows.Forms.Button btnQuanLyDay;
         private System.Windows.Forms.Button btnDanhSachPhong;
         private System.Windows.Forms.Button btnQuanlynguoidung;
+        private System.Windows.Forms.Button btnGuimaiThongbao;
     }
 }

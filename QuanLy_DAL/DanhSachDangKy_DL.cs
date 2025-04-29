@@ -240,7 +240,40 @@ namespace QuanLy_DAL
             finally { DisConnect(); }
         }
 
-        
+        public List<Phong> LayPhongTrong()
+        {
+            List<Phong> phongs = new List<Phong>();
+            string sql = @"SELECT * FROM Phong 
+                 WHERE tinhtrang = N'Thiếu' 
+                   AND sosv < sosvtoida";
+            try
+            {
+                Connect();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Phong phong = new Phong(
+                        reader["maphong"].ToString(),
+                        reader["tenphong"].ToString(),
+                        Convert.ToInt32(reader["sosv"]),
+                        Convert.ToInt32(reader["sosvtoida"]),
+                        reader["tinhtrang"].ToString(),
+                        reader["loaiphong"].ToString(),
+                        reader["xeploai"].ToString(),
+                        reader["day"].ToString(),
+                        reader["chisocu"].ToString()
+                    );
+                    phongs.Add(phong);
+                }
+                reader.Close();
+                return phongs;
+            }
+            catch (SqlException ex) { throw ex; }
+            finally { DisConnect(); }
+        }
+
+         
     }
 }
 

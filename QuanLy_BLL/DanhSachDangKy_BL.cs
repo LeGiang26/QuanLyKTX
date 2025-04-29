@@ -108,7 +108,6 @@ namespace QuanLy_BLL
             }
         }
 
-
         private void ThemSinhVienVaoPhong(SinhVienDangKy sv, Phong phong)
         {
             // Chuyển sinh viên từ đăng ký sang danh sách chính thức
@@ -123,6 +122,16 @@ namespace QuanLy_BLL
             danhSachDangKyDL.CapNhatSoSV(phong.maphong); // Cập nhật số SV và tình trạng phòng
         }
 
-        
+        public List<Phong> LayPhongTrong()
+        {
+            try
+            {
+                return danhSachDangKyDL.LayPhongTrong();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

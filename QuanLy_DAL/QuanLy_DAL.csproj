@@ -50,6 +50,7 @@
     <Compile Include="QuanLyNhanVien_DL.cs" />
     <Compile Include="SinhVienDangKy_DL.cs" />
     <Compile Include="ThanhToanLuongNhanVien_DL.cs" />
+    <Compile Include="ThongBaoGmail_DL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransferObject\TransferObject.csproj">

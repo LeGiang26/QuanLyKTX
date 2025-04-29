@@ -54,8 +54,8 @@ namespace QuanLyKyTucXa_main
                 }
                 else
                 {
-                    FrmUser frmUser = new FrmUser();
-                    frmUser.ShowDialog();
+                    //FrmUser frmUser = new FrmUser();
+                    //frmUser.ShowDialog();
                 }
                 this.Close();
             }
