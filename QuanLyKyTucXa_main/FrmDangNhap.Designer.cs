@@ -28,58 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnDangnhap = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.GBtnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.txtTaikhoan = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.GcbShowpassword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(172, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(224, 27);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Đăng nhập tài khoản";
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.pictureBox3.Location = new System.Drawing.Point(82, 283);
+            this.pictureBox3.Image = global::QuanLyKyTucXa_main.Properties.Resources.key;
+            this.pictureBox3.Location = new System.Drawing.Point(249, 213);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(55, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
-            // btnDangnhap
-            // 
-            this.btnDangnhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.btnDangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangnhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDangnhap.Location = new System.Drawing.Point(155, 347);
-            this.btnDangnhap.Name = "btnDangnhap";
-            this.btnDangnhap.Size = new System.Drawing.Size(300, 56);
-            this.btnDangnhap.TabIndex = 5;
-            this.btnDangnhap.Text = "Đăng nhập";
-            this.btnDangnhap.UseVisualStyleBackColor = false;
-            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.pictureBox2.Location = new System.Drawing.Point(82, 211);
+            this.pictureBox2.Image = global::QuanLyKyTucXa_main.Properties.Resources.username;
+            this.pictureBox2.Location = new System.Drawing.Point(249, 141);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,52 +73,163 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.pictureBox1.Location = new System.Drawing.Point(177, 10);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(10)))), ((int)(((byte)(143)))));
+            this.pictureBox1.Image = global::QuanLyKyTucXa_main.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(69, 55);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(177, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.GcbShowpassword);
+            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtMatkhau);
+            this.panel1.Controls.Add(this.txtTaikhoan);
+            this.panel1.Controls.Add(this.GBtnThoat);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(114, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(615, 437);
+            this.panel1.TabIndex = 11;
+            // 
+            // GBtnThoat
+            // 
+            this.GBtnThoat.BorderRadius = 20;
+            this.GBtnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GBtnThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GBtnThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.GBtnThoat.ForeColor = System.Drawing.Color.White;
+            this.GBtnThoat.Location = new System.Drawing.Point(249, 355);
+            this.GBtnThoat.Name = "GBtnThoat";
+            this.GBtnThoat.Size = new System.Drawing.Size(144, 45);
+            this.GBtnThoat.TabIndex = 10;
+            this.GBtnThoat.Text = "Đăng nhập";
+            this.GBtnThoat.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.GBtnThoat.Click += new System.EventHandler(this.GBtnDangnhap_Click);
+            // 
             // txtMatkhau
             // 
             this.txtMatkhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatkhau.Location = new System.Drawing.Point(155, 288);
+            this.txtMatkhau.Location = new System.Drawing.Point(310, 218);
             this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(297, 30);
-            this.txtMatkhau.TabIndex = 3;
+            this.txtMatkhau.PasswordChar = '*';
+            this.txtMatkhau.Size = new System.Drawing.Size(262, 30);
+            this.txtMatkhau.TabIndex = 11;
             // 
             // txtTaikhoan
             // 
             this.txtTaikhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTaikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTaikhoan.Location = new System.Drawing.Point(155, 216);
+            this.txtTaikhoan.Location = new System.Drawing.Point(310, 146);
             this.txtTaikhoan.Name = "txtTaikhoan";
-            this.txtTaikhoan.Size = new System.Drawing.Size(297, 30);
-            this.txtTaikhoan.TabIndex = 4;
+            this.txtTaikhoan.Size = new System.Drawing.Size(262, 30);
+            this.txtTaikhoan.TabIndex = 12;
             // 
-            // panel1
+            // guna2Panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.btnDangnhap);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.txtMatkhau);
-            this.panel1.Controls.Add(this.txtTaikhoan);
-            this.panel1.Location = new System.Drawing.Point(26, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(552, 458);
-            this.panel1.TabIndex = 11;
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(10)))), ((int)(((byte)(143)))));
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(313, 437);
+            this.guna2Panel1.TabIndex = 12;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 196);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(294, 27);
+            this.guna2HtmlLabel1.TabIndex = 0;
+            this.guna2HtmlLabel1.Text = "Hệ Thống Quản Lý Ký Túc Xá";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(244, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 25);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Đăng nhập tài khoản";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(428, 355);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(144, 45);
+            this.guna2Button1.TabIndex = 14;
+            this.guna2Button1.Text = "Thoát";
+            this.guna2Button1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // GcbShowpassword
+            // 
+            this.GcbShowpassword.AutoSize = true;
+            this.GcbShowpassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GcbShowpassword.CheckedState.BorderRadius = 0;
+            this.GcbShowpassword.CheckedState.BorderThickness = 0;
+            this.GcbShowpassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.GcbShowpassword.Location = new System.Drawing.Point(447, 268);
+            this.GcbShowpassword.Name = "GcbShowpassword";
+            this.GcbShowpassword.Size = new System.Drawing.Size(125, 20);
+            this.GcbShowpassword.TabIndex = 15;
+            this.GcbShowpassword.Text = "Show Password";
+            this.GcbShowpassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.GcbShowpassword.UncheckedState.BorderRadius = 0;
+            this.GcbShowpassword.UncheckedState.BorderThickness = 0;
+            this.GcbShowpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(307, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 18);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tên đăng nhập:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(310, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 18);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Mật khẩu:";
             // 
             // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 554);
+            this.ClientSize = new System.Drawing.Size(729, 437);
+            this.ControlBox = false;
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Name = "FrmDangNhap";
             this.Text = "Đăng Nhập";
@@ -142,20 +238,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnDangnhap;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button GBtnThoat;
         private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.TextBox txtTaikhoan;
-        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2CheckBox GcbShowpassword;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

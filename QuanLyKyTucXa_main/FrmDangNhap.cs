@@ -23,9 +23,7 @@ namespace QuanLyKyTucXa_main
             dangnhapBL = new DangNhap_BL();
         }
 
-
-
-        private void btnDangnhap_Click(object sender, EventArgs e)
+        private void GBtnDangnhap_Click(object sender, EventArgs e)
         {
             string tenDangNhap = txtTaikhoan.Text.Trim();
             string matKhau = txtMatkhau.Text.Trim();
@@ -50,6 +48,16 @@ namespace QuanLyKyTucXa_main
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }  
 }
