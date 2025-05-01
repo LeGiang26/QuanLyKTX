@@ -340,5 +340,8 @@
   <ItemGroup>
     <None Include="Resources\key.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mortgage-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

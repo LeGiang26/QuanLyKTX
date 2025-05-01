@@ -23,7 +23,25 @@ namespace QuanLyKyTucXa_main
 
         }
 
-        private void btnDangky_Click(object sender, EventArgs e)
+        // Phương thức xóa form
+        private void ClearForm()
+        {
+            txtMasv.Clear();
+            txtTensv.Clear();
+            cbGioitinh.SelectedIndex = -1;
+            dtpNgaysinh.Value = DateTime.Now;
+            txtQuequan.Clear();
+            cbKhoa.SelectedIndex = -1;
+            txtLop.Clear();
+            cbLoaiuutien.SelectedIndex = -1;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void GBtnDangky_Click(object sender, EventArgs e)
         {
             // Kiểm tra dữ liệu nhập
             if (string.IsNullOrEmpty(txtMasv.Text) ||
@@ -79,20 +97,7 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        // Phương thức xóa form
-        private void ClearForm()
-        {
-            txtMasv.Clear();
-            txtTensv.Clear();
-            cbGioitinh.SelectedIndex = -1;
-            dtpNgaysinh.Value = DateTime.Now;
-            txtQuequan.Clear();
-            cbKhoa.SelectedIndex = -1;
-            txtLop.Clear();
-            cbLoaiuutien.SelectedIndex = -1;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
+        private void GBtnHuybo_Click(object sender, EventArgs e)
         {
             this.Close();
         }
