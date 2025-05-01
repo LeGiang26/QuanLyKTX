@@ -307,7 +307,6 @@
             this.dgvSVDaDuyet.RowHeadersWidth = 51;
             this.dgvSVDaDuyet.Size = new System.Drawing.Size(1252, 261);
             this.dgvSVDaDuyet.TabIndex = 58;
-            this.dgvSVDaDuyet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSVDaDuyet_CellClick);
             // 
             // DanhSachDangKy
             // 

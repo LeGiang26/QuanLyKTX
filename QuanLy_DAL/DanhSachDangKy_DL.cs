@@ -182,19 +182,16 @@ namespace QuanLy_DAL
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    // Parse dữ liệu từ SQL sang int
-                    int sosv = Convert.ToInt32(reader["sosv"]);
-                    int sosvtoida = Convert.ToInt32(reader["sosvtoida"]);
+                    
                     Phong phong = new Phong(
                         reader["maphong"].ToString(),
                         reader["tenphong"].ToString(),
-                        sosv,
-                        sosvtoida,
+                        reader["sosv"].ToString(),
+                        reader["sosvtoida"].ToString(),
                         reader["tinhtrang"].ToString(),
                         reader["loaiphong"].ToString(),
                         reader["xeploai"].ToString(),
-                        reader["day"].ToString(),
-                        reader["chisocu"].ToString()
+                        reader["day"].ToString()
                     );
                     phongs.Add(phong);
                 }
@@ -256,13 +253,12 @@ namespace QuanLy_DAL
                     Phong phong = new Phong(
                         reader["maphong"].ToString(),
                         reader["tenphong"].ToString(),
-                        Convert.ToInt32(reader["sosv"]),
-                        Convert.ToInt32(reader["sosvtoida"]),
+                        reader["sosv"].ToString(),
+                        reader["sosvtoida"].ToString(),
                         reader["tinhtrang"].ToString(),
                         reader["loaiphong"].ToString(),
                         reader["xeploai"].ToString(),
-                        reader["day"].ToString(),
-                        reader["chisocu"].ToString()
+                        reader["day"].ToString()
                     );
                     phongs.Add(phong);
                 }

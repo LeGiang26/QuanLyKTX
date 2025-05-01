@@ -91,9 +91,9 @@ namespace QuanLy_BLL
                     foreach (var phong in phongTrong)
                     {
                         // Kiểm tra số lượng sinh viên HIỆN TẠI từ CSDL
-                        int soSVHienTai = danhSachDangKyDL.LaySoSVHienTai(phong.maphong);
+                        int soSVHienTai = danhSachDangKyDL.LaySoSVHienTai(phong.Maphong);
 
-                        if (soSVHienTai < phong.sosvtoida)
+                        if (soSVHienTai < phong.Sosvtoida)
                         {
                             ThemSinhVienVaoPhong(sv, phong);
                             daXep = true;
@@ -113,13 +113,13 @@ namespace QuanLy_BLL
             // Chuyển sinh viên từ đăng ký sang danh sách chính thức
             var sinhVien = new SinhVien(
                 sv.masvdky, sv.tensv, sv.gioitinh, sv.ngaysinh,
-                sv.quequan, sv.email, sv.khoa, sv.lop, sv.loaiuutien, phong.maphong
+                sv.quequan, sv.email, sv.khoa, sv.lop, sv.loaiuutien, phong.Maphong
             );
 
             // Cập nhật CSDL
             danhSachDangKyDL.ThemSinhVien(sinhVien);
             danhSachDangKyDL.XoaSinhVienDangKy(sv.masvdky);
-            danhSachDangKyDL.CapNhatSoSV(phong.maphong); // Cập nhật số SV và tình trạng phòng
+            danhSachDangKyDL.CapNhatSoSV(phong.Maphong); // Cập nhật số SV và tình trạng phòng
         }
 
         public List<Phong> LayPhongTrong()

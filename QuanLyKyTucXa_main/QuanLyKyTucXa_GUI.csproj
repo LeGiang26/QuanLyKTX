@@ -117,12 +117,6 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenuUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMenuUser.Designer.cs">
-      <DependentUpon>FrmMenuUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmQuanLyKyLuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,9 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenuUser.resx">
-      <DependentUpon>FrmMenuUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLyKyLuat.resx">
       <DependentUpon>FrmQuanLyKyLuat.cs</DependentUpon>

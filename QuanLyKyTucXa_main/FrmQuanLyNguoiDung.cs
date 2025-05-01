@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferObject;
+using QuanLy_BLL;
 
 namespace QuanLyKyTucXa_main
 {

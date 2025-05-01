@@ -51,6 +51,5 @@ namespace QuanLyKyTucXa_main
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
-    
+    }  
 }

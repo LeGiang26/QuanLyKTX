@@ -51,6 +51,7 @@ namespace QuanLy_DAL
                         reader["gioitinh"].ToString(),
                         reader["ngaysinh"].ToString(),
                         reader["quequan"].ToString(),
+                        reader["email"].ToString(),
                         reader["khoa"].ToString(),
                         reader["lop"].ToString(),
                         reader["loaiuutien"].ToString(),
