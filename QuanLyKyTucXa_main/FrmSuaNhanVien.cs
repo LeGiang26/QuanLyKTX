@@ -31,7 +31,8 @@ namespace QuanLyKyTucXa_main
             txtSodienthoai.Text = nv.sodienthoai;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+
+        private void GBtnLuu_Click(object sender, EventArgs e)
         {
             try
             {
@@ -58,7 +59,7 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void btnDong_Click(object sender, EventArgs e)
+        private void GBtnDong_Click(object sender, EventArgs e)
         {
             this.Close();
         }

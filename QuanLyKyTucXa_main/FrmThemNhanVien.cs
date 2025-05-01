@@ -22,7 +22,13 @@ namespace QuanLyKyTucXa_main
             quanLyNhanVien_BL = new QuanLyNhanVien_BL();
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+
+        private void FrmThemNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GBtnLuu_Click(object sender, EventArgs e)
         {
             string maNV, tenNV, gioiTinh, ngaySinh, diaChi, soDienThoai;
             maNV = txtManv.Text;
@@ -54,7 +60,7 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void btnDong_Click(object sender, EventArgs e)
+        private void GBtnDong_Click(object sender, EventArgs e)
         {
             this.Close();
         }

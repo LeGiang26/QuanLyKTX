@@ -23,53 +23,6 @@ namespace QuanLyKyTucXa_main
             quanLyDay_BL = new QuanLyDay_BL();
         }
 
-     
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            // Kiểm tra dữ liệu nhập
-            if (string.IsNullOrEmpty(txtMaday.Text) ||
-                string.IsNullOrEmpty(txtTenday.Text) ||
-                cbQuanly.SelectedValue == null ||
-                string.IsNullOrEmpty(txtTrangthai.Text))
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-                return;
-            }
-
-            try
-            {
-                // Tạo đối tượng Day từ dữ liệu nhập
-                DayPhong newDay = new DayPhong(
-                    txtMaday.Text.Trim(),
-                    txtTenday.Text.Trim(),
-                    cbQuanly.Text.Trim(), // Lấy mã NV từ ValueMember
-                    txtTrangthai.Text.Trim()
-                );
-
-                // Gọi BL để thêm vào database
-                bool result = quanLyDay_BL.ThemDay(newDay);
-
-                if (result)
-                {
-                    MessageBox.Show("Thêm dãy thành công!");
-                    // Load lại DataGridView
-                    dgvDay.DataSource = quanLyDay_BL.LayDanhSachDay();
-                    // Xóa trắng các ô nhập
-                    txtMaday.Clear();
-                    txtTenday.Clear();
-                    txtTrangthai.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Thêm dãy thất bại!");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi database: " + ex.Message);
-            }
-        }
-
         private void FrmQuanLyDay_Load(object sender, EventArgs e)
         {
             // Load danh sách dãy
@@ -94,53 +47,7 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            // Kiểm tra dữ liệu nhập
-            if (string.IsNullOrEmpty(txtMaday.Text) ||
-                string.IsNullOrEmpty(txtTenday.Text) ||
-                cbQuanly.SelectedValue == null ||
-                string.IsNullOrEmpty(txtTrangthai.Text))
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-                return;
-            }
-
-            try
-            {
-                // Tạo đối tượng Day từ dữ liệu nhập
-                DayPhong updatedDay = new DayPhong(
-                    txtMaday.Text.Trim(),
-                    txtTenday.Text.Trim(),
-                    cbQuanly.Text.Trim(), // Lấy mã NV từ ValueMember
-                    txtTrangthai.Text.Trim()
-                );
-
-                // Gọi BL để cập nhật vào database
-                bool result = quanLyDay_BL.SuaDay(updatedDay);
-
-                if (result)
-                {
-                    MessageBox.Show("Cập nhật dãy thành công!");
-                    // Load lại DataGridView
-                    dgvDay.DataSource = quanLyDay_BL.LayDanhSachDay();
-                    // Xóa trắng các ô nhập
-                    txtMaday.Clear();
-                    txtTenday.Clear();
-                    txtTrangthai.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Cập nhật dãy thất bại!");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Lỗi database: " + ex.Message);
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void GBtnXoa_Click(object sender, EventArgs e)
         {
             if (dgvDay.CurrentRow == null)
             {
@@ -189,6 +96,103 @@ namespace QuanLyKyTucXa_main
                     }
                 }
             }
+        }
+
+        private void GBtnSua_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu nhập
+            if (string.IsNullOrEmpty(txtMaday.Text) ||
+                string.IsNullOrEmpty(txtTenday.Text) ||
+                cbQuanly.SelectedValue == null ||
+                string.IsNullOrEmpty(txtTrangthai.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            try
+            {
+                // Tạo đối tượng Day từ dữ liệu nhập
+                DayPhong updatedDay = new DayPhong(
+                    txtMaday.Text.Trim(),
+                    txtTenday.Text.Trim(),
+                    cbQuanly.Text.Trim(), // Lấy mã NV từ ValueMember
+                    txtTrangthai.Text.Trim()
+                );
+
+                // Gọi BL để cập nhật vào database
+                bool result = quanLyDay_BL.SuaDay(updatedDay);
+
+                if (result)
+                {
+                    MessageBox.Show("Cập nhật dãy thành công!");
+                    // Load lại DataGridView
+                    dgvDay.DataSource = quanLyDay_BL.LayDanhSachDay();
+                    // Xóa trắng các ô nhập
+                    txtMaday.Clear();
+                    txtTenday.Clear();
+                    txtTrangthai.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật dãy thất bại!");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi database: " + ex.Message);
+            }
+        }
+
+        private void GBtnThem_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra dữ liệu nhập
+            if (string.IsNullOrEmpty(txtMaday.Text) ||
+                string.IsNullOrEmpty(txtTenday.Text) ||
+                cbQuanly.SelectedValue == null ||
+                string.IsNullOrEmpty(txtTrangthai.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            try
+            {
+                // Tạo đối tượng Day từ dữ liệu nhập
+                DayPhong newDay = new DayPhong(
+                    txtMaday.Text.Trim(),
+                    txtTenday.Text.Trim(),
+                    cbQuanly.Text.Trim(), // Lấy mã NV từ ValueMember
+                    txtTrangthai.Text.Trim()
+                );
+
+                // Gọi BL để thêm vào database
+                bool result = quanLyDay_BL.ThemDay(newDay);
+
+                if (result)
+                {
+                    MessageBox.Show("Thêm dãy thành công!");
+                    // Load lại DataGridView
+                    dgvDay.DataSource = quanLyDay_BL.LayDanhSachDay();
+                    // Xóa trắng các ô nhập
+                    txtMaday.Clear();
+                    txtTenday.Clear();
+                    txtTrangthai.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm dãy thất bại!");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi database: " + ex.Message);
+            }
+        }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

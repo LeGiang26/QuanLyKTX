@@ -166,12 +166,12 @@ namespace QuanLy_DAL
             finally { DisConnect(); }
         }
 
-        public List<Phong> LayPhongTheoDieuKien(string gioiTinh, string khoa, string tinhTrang)
+        public List<Phong> LayPhongTheoDieuKien(string gioiTinh, string tinhTrang)
         {
             List<Phong> phongs = new List<Phong>();
             string sql = @"SELECT * FROM Phong 
-                         WHERE loaiphong = @gioiTinh 
-                           AND tinhtrang = @tinhTrang";
+                 WHERE loaiphong = @gioiTinh 
+                   AND tinhtrang = @tinhTrang";
 
             try
             {

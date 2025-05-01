@@ -21,36 +21,14 @@ namespace QuanLyKyTucXa_main
             quanLyNguoiDung_BL = new QuanLyNguoiDung_BL();
         }
 
-        private void btnTimkiem_Click(object sender, EventArgs e)
+
+        private void FrmQuanLyNguoiDung_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string keyword = txtTimkiem.Text.Trim();
-                bool timTheoMa = rbManv.Checked;
-
-                if (string.IsNullOrEmpty(keyword))
-                {
-                    // Nếu ô tìm kiếm trống, load lại toàn bộ danh sách
-                    dgvNguoidung.DataSource = quanLyNguoiDung_BL.LayDanhSachNguoiDung();
-                    return;
-                }
-
-                // Gọi BLL để tìm kiếm
-                List<QuanLyNguoiDung> ketQua = quanLyNguoiDung_BL.TimKiemNguoiDung(keyword, timTheoMa);
-
-                // Hiển thị kết quả lên DataGridView
-                dgvNguoidung.DataSource = ketQua;
-
-                if (ketQua.Count == 0)
-                    MessageBox.Show("Không tìm thấy nhân viên phù hợp!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
+            dgvNguoidung.DataSource = quanLyNguoiDung_BL.LayDanhSachNguoiDung();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+
+        private void GBtnThem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -89,7 +67,7 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void GBtnSua_Click(object sender, EventArgs e)
         {
             try
             {
@@ -124,12 +102,7 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void FrmQuanLyNguoiDung_Load(object sender, EventArgs e)
-        {
-            dgvNguoidung.DataSource = quanLyNguoiDung_BL.LayDanhSachNguoiDung();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void GBtnXoa_Click(object sender, EventArgs e)
         {
             try
             {
@@ -169,6 +142,45 @@ namespace QuanLyKyTucXa_main
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+        }
+
+        private void rbManv_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GBtnTimkiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string keyword = txtTimkiem.Text.Trim();
+                bool timTheoMa = rbManv.Checked;
+
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    // Nếu ô tìm kiếm trống, load lại toàn bộ danh sách
+                    dgvNguoidung.DataSource = quanLyNguoiDung_BL.LayDanhSachNguoiDung();
+                    return;
+                }
+
+                // Gọi BLL để tìm kiếm
+                List<QuanLyNguoiDung> ketQua = quanLyNguoiDung_BL.TimKiemNguoiDung(keyword, timTheoMa);
+
+                // Hiển thị kết quả lên DataGridView
+                dgvNguoidung.DataSource = ketQua;
+
+                if (ketQua.Count == 0)
+                    MessageBox.Show("Không tìm thấy nhân viên phù hợp!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

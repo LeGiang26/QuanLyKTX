@@ -60,50 +60,40 @@ namespace QuanLy_BLL
         public void XepPhongTuDong(List<SinhVienDangKy> dsDangKy)
         {
 
-            // Nhóm sinh viên theo giới tính và khoa (Clustering)
+            // Nhóm sinh viên theo giới tính
             var clusterGroups = new Dictionary<string, List<SinhVienDangKy>>();
             foreach (var sv in dsDangKy)
             {
-                string key = $"{sv.gioitinh}_{sv.khoa}";
+                string key = sv.gioitinh; // Chỉ lấy giới tính
                 if (!clusterGroups.ContainsKey(key))
                     clusterGroups[key] = new List<SinhVienDangKy>();
                 clusterGroups[key].Add(sv);
             }
 
-
             var sinhVienKhongXepDuoc = new List<SinhVienDangKy>();
 
-            // Xếp phòng cho từng nhóm (Greedy)
             foreach (var cluster in clusterGroups)
             {
-                // Lấy danh sách phòng phù hợp cho nhóm hiện tại
+                // Lấy phòng theo giới tính và tình trạng
                 var phongTrong = danhSachDangKyDL.LayPhongTheoDieuKien(
-                    cluster.Key.Split('_')[0], // Giới tính
-                    cluster.Key.Split('_')[1], // Khoa
-                    "Thiếu" // Tình trạng phòng
+                    cluster.Key, // Giới tính
+                    "Thiếu"       // Tình trạng
                 );
 
-                // Xử lý từng sinh viên trong nhóm
                 foreach (var sv in cluster.Value)
                 {
                     bool daXep = false;
-
                     foreach (var phong in phongTrong)
                     {
-                        // Kiểm tra số lượng sinh viên HIỆN TẠI từ CSDL
                         int soSVHienTai = danhSachDangKyDL.LaySoSVHienTai(phong.Maphong);
-
                         if (soSVHienTai < phong.Sosvtoida)
                         {
                             ThemSinhVienVaoPhong(sv, phong);
                             daXep = true;
-                            break; // Thoát khi xếp được
-                        }
-                        if (!daXep)
-                        {
-                            sinhVienKhongXepDuoc.Add(sv);
+                            break;
                         }
                     }
+                    if (!daXep) sinhVienKhongXepDuoc.Add(sv);
                 }
             }
         }

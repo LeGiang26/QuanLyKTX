@@ -27,27 +27,65 @@ namespace QuanLyKyTucXa_main
             dgvNhanvien.DataSource = thanhToanLuongNhanVien_BL.LayDanhSachNhanVien();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void dgvNhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (e.RowIndex >= 0)
             {
-                if (string.IsNullOrEmpty(txtMaluong.Text))
-                    throw new Exception("Vui lòng chọn hóa đơn cần xóa");
-
-                // Gọi phương thức xóa
-                thanhToanLuongNhanVien_BL.XoaLuongNhanVien(txtMaluong.Text);
-
-                // Làm mới DataGridView
-                dgvLuongnhanvien.DataSource = thanhToanLuongNhanVien_BL.LayDanhSachLuongNhanVien();
-                MessageBox.Show("Xóa thành công!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                DataGridViewRow row = dgvNhanvien.Rows[e.RowIndex];
+                txtManv.Text = row.Cells["maNhanVien"].Value.ToString();
+                txtTennv.Text = row.Cells["tenNhanVien"].Value.ToString();
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+
+        private void dgvLuongnhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvLuongnhanvien.Rows[e.RowIndex];
+                txtMaluong.Text = row.Cells["maluong"].Value.ToString();
+                txtManv.Text = row.Cells["manv"].Value.ToString();
+                txtTennv.Text = row.Cells["tennv"].Value.ToString();
+                dtpThang.Value = DateTime.ParseExact(row.Cells["thang"].Value.ToString(), "MM-yyyy", null);
+                txtLuongcoban.Text = row.Cells["luongcoban"].Value.ToString();
+                txtPhucap.Text = row.Cells["phucap"].Value.ToString();
+                txtThuongphat.Text = row.Cells["thuongphat"].Value.ToString();
+                dtpNgaythanhtoan.Value = DateTime.Parse(row.Cells["ngaythanhtoan"].Value.ToString());
+                txtTongluong.Text = row.Cells["tongluong"].Value.ToString();
+            }
+        }
+
+
+        private void GBtnTinhluong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal luongCoBan = decimal.Parse(txtLuongcoban.Text);
+                decimal phuCap = decimal.Parse(txtPhucap.Text);
+                decimal thuongPhat = decimal.Parse(txtThuongphat.Text);
+                decimal tongLuong = luongCoBan + phuCap + thuongPhat;
+
+                txtTongluong.Text = tongLuong.ToString("N0");
+
+                LuongNhanVien luongNV = new LuongNhanVien(
+                    txtMaluong.Text,
+                    txtManv.Text,
+                    txtTennv.Text,
+                    dtpThang.Value.ToString("MM-yyyy"), // Định dạng tháng
+                    txtLuongcoban.Text,
+                    txtPhucap.Text,
+                    txtThuongphat.Text,
+                    dtpNgaythanhtoan.Value.ToString("yyyy-MM-dd"), // Ngày thanh toán
+                    tongLuong.ToString()
+                );
+
+                thanhToanLuongNhanVien_BL.ThemHoacCapNhatLuong(luongNV);
+                dgvLuongnhanvien.DataSource = thanhToanLuongNhanVien_BL.LayDanhSachLuongNhanVien();
+            }
+            catch (Exception ex) { MessageBox.Show("Lỗi: " + ex.Message); }
+        }
+
+        private void GBtnSua_Click(object sender, EventArgs e)
         {
             try
             {
@@ -80,61 +118,29 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void dgvNhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvNhanvien.Rows[e.RowIndex];
-                txtManv.Text = row.Cells["maNhanVien"].Value.ToString();
-                txtTennv.Text = row.Cells["tenNhanVien"].Value.ToString();
-            }
-        }
-
-        private void btnTinhluong_Click(object sender, EventArgs e)
+        private void GBtnXoa_Click(object sender, EventArgs e)
         {
             try
             {
-                decimal luongCoBan = decimal.Parse(txtLuongcoban.Text);
-                decimal phuCap = decimal.Parse(txtPhucap.Text);
-                decimal thuongPhat = decimal.Parse(txtThuongphat.Text);
-                decimal tongLuong = luongCoBan + phuCap + thuongPhat;
+                if (string.IsNullOrEmpty(txtMaluong.Text))
+                    throw new Exception("Vui lòng chọn hóa đơn cần xóa");
 
-                txtTongluong.Text = tongLuong.ToString("N0");
+                // Gọi phương thức xóa
+                thanhToanLuongNhanVien_BL.XoaLuongNhanVien(txtMaluong.Text);
 
-                LuongNhanVien luongNV = new LuongNhanVien(
-                    txtMaluong.Text,
-                    txtManv.Text,
-                    txtTennv.Text,
-                    dtpThang.Value.ToString("MM-yyyy"), // Định dạng tháng
-                    txtLuongcoban.Text,
-                    txtPhucap.Text,
-                    txtThuongphat.Text,
-                    dtpNgaythanhtoan.Value.ToString("yyyy-MM-dd"), // Ngày thanh toán
-                    tongLuong.ToString()
-                );
-
-                thanhToanLuongNhanVien_BL.ThemHoacCapNhatLuong(luongNV);
+                // Làm mới DataGridView
                 dgvLuongnhanvien.DataSource = thanhToanLuongNhanVien_BL.LayDanhSachLuongNhanVien();
+                MessageBox.Show("Xóa thành công!");
             }
-            catch (Exception ex) { MessageBox.Show("Lỗi: " + ex.Message); }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
 
-        private void dgvLuongnhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvNhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvLuongnhanvien.Rows[e.RowIndex];
-                txtMaluong.Text = row.Cells["maluong"].Value.ToString();
-                txtManv.Text = row.Cells["manv"].Value.ToString();
-                txtTennv.Text = row.Cells["tennv"].Value.ToString();
-                dtpThang.Value = DateTime.ParseExact(row.Cells["thang"].Value.ToString(), "MM-yyyy", null);
-                txtLuongcoban.Text = row.Cells["luongcoban"].Value.ToString();
-                txtPhucap.Text = row.Cells["phucap"].Value.ToString();
-                txtThuongphat.Text = row.Cells["thuongphat"].Value.ToString();
-                dtpNgaythanhtoan.Value = DateTime.Parse(row.Cells["ngaythanhtoan"].Value.ToString());
-                txtTongluong.Text = row.Cells["tongluong"].Value.ToString();
-            }
+
         }
     }
 }

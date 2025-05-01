@@ -48,13 +48,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.GBtnDangky = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBtnHuybo = new Guna.UI2.WinForms.Guna2Button();
+            this.GBtnDangky = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -109,7 +109,7 @@
             "K14",
             "K15",
             "K16"});
-            this.cbKhoa.Location = new System.Drawing.Point(696, 298);
+            this.cbKhoa.Location = new System.Drawing.Point(660, 117);
             this.cbKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbKhoa.Name = "cbKhoa";
             this.cbKhoa.Size = new System.Drawing.Size(160, 33);
@@ -152,7 +152,7 @@
             // 
             this.txtLop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLop.Location = new System.Drawing.Point(696, 365);
+            this.txtLop.Location = new System.Drawing.Point(660, 189);
             this.txtLop.Margin = new System.Windows.Forms.Padding(4);
             this.txtLop.Name = "txtLop";
             this.txtLop.Size = new System.Drawing.Size(160, 30);
@@ -277,7 +277,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(190)))));
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(184)))));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(215, 82);
@@ -292,18 +292,30 @@
             this.guna2CustomGradientPanel1.BorderRadius = 50;
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label10);
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(190)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(190)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(190)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(190)))));
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(184)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(184)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(184)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(184)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(36, -31);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(957, 169);
             this.guna2CustomGradientPanel1.TabIndex = 58;
             // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BorderRadius = 50;
+            this.guna2CustomGradientPanel2.Controls.Add(this.GBtnHuybo);
+            this.guna2CustomGradientPanel2.Controls.Add(this.GBtnDangky);
+            this.guna2CustomGradientPanel2.Controls.Add(this.cbKhoa);
+            this.guna2CustomGradientPanel2.Controls.Add(this.txtLop);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(36, 171);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(957, 478);
+            this.guna2CustomGradientPanel2.TabIndex = 80;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(132)))), ((int)(((byte)(190)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(184)))));
             this.pictureBox1.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_mortgage_100;
             this.pictureBox1.Location = new System.Drawing.Point(29, 43);
             this.pictureBox1.Name = "pictureBox1";
@@ -311,33 +323,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
-            // 
-            // guna2CustomGradientPanel2
-            // 
-            this.guna2CustomGradientPanel2.BorderRadius = 50;
-            this.guna2CustomGradientPanel2.Controls.Add(this.GBtnHuybo);
-            this.guna2CustomGradientPanel2.Controls.Add(this.GBtnDangky);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(36, 171);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(957, 478);
-            this.guna2CustomGradientPanel2.TabIndex = 80;
-            // 
-            // GBtnDangky
-            // 
-            this.GBtnDangky.BackColor = System.Drawing.Color.White;
-            this.GBtnDangky.BorderRadius = 20;
-            this.GBtnDangky.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnDangky.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnDangky.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GBtnDangky.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnDangky.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBtnDangky.ForeColor = System.Drawing.Color.White;
-            this.GBtnDangky.Location = new System.Drawing.Point(595, 403);
-            this.GBtnDangky.Name = "GBtnDangky";
-            this.GBtnDangky.Size = new System.Drawing.Size(163, 45);
-            this.GBtnDangky.TabIndex = 70;
-            this.GBtnDangky.Text = "Đăng Ký";
-            this.GBtnDangky.Click += new System.EventHandler(this.GBtnDangky_Click);
             // 
             // GBtnHuybo
             // 
@@ -349,12 +334,33 @@
             this.GBtnHuybo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.GBtnHuybo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBtnHuybo.ForeColor = System.Drawing.Color.White;
+            this.GBtnHuybo.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_close_100__1_;
+            this.GBtnHuybo.ImageSize = new System.Drawing.Size(35, 35);
             this.GBtnHuybo.Location = new System.Drawing.Point(773, 403);
             this.GBtnHuybo.Name = "GBtnHuybo";
             this.GBtnHuybo.Size = new System.Drawing.Size(163, 45);
             this.GBtnHuybo.TabIndex = 71;
             this.GBtnHuybo.Text = "Hủy Bỏ";
             this.GBtnHuybo.Click += new System.EventHandler(this.GBtnHuybo_Click);
+            // 
+            // GBtnDangky
+            // 
+            this.GBtnDangky.BackColor = System.Drawing.Color.White;
+            this.GBtnDangky.BorderRadius = 20;
+            this.GBtnDangky.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnDangky.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.GBtnDangky.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.GBtnDangky.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.GBtnDangky.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBtnDangky.ForeColor = System.Drawing.Color.White;
+            this.GBtnDangky.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_register_100;
+            this.GBtnDangky.ImageSize = new System.Drawing.Size(35, 35);
+            this.GBtnDangky.Location = new System.Drawing.Point(594, 403);
+            this.GBtnDangky.Name = "GBtnDangky";
+            this.GBtnDangky.Size = new System.Drawing.Size(163, 45);
+            this.GBtnDangky.TabIndex = 70;
+            this.GBtnDangky.Text = "Đăng Ký";
+            this.GBtnDangky.Click += new System.EventHandler(this.GBtnDangky_Click);
             // 
             // FrmDangKyPhong
             // 
@@ -365,11 +371,9 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbLoaiuutien);
-            this.Controls.Add(this.cbKhoa);
             this.Controls.Add(this.dtpNgaysinh);
             this.Controls.Add(this.cbGioitinh);
             this.Controls.Add(this.txtQuequan);
-            this.Controls.Add(this.txtLop);
             this.Controls.Add(this.txtTensv);
             this.Controls.Add(this.txtMasv);
             this.Controls.Add(this.label9);
@@ -385,8 +389,9 @@
             this.Text = "Đăng Ký Phòng";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

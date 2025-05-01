@@ -23,40 +23,7 @@ namespace QuanLyKyTucXa_main
             danhSachDangKy_BL = new DanhSachDangKy_BL();
         }
 
-        private void btnXepphong_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Lấy danh sách sinh viên chờ duyệt từ DataGridView
-                var dsDangKy = (List<SinhVienDangKy>)dgvSVChoDuyet.DataSource;
-
-                // Gọi nghiệp vụ xếp phòng
-                danhSachDangKy_BL.XepPhongTuDong(dsDangKy);
-
-                // Cập nhật lại DataGridView bằng cách tải lại dữ liệu từ CSDL
-                var dsChoDuyetMoi = danhSachDangKy_BL.LayDSSinhVienDangKy();
-                var dsDaDuyetMoi = danhSachDangKy_BL.LayDSSinhVien();
-
-                // Reset DataSource để DataGridView cập nhật
-                dgvSVChoDuyet.DataSource = null;
-                dgvSVChoDuyet.DataSource = dsChoDuyetMoi;
-
-                dgvSVDaDuyet.DataSource = null;
-                dgvSVDaDuyet.DataSource = dsDaDuyetMoi;
-
-                MessageBox.Show("Xếp phòng thành công!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                // Luôn cập nhật DataGridView dù có lỗi hay không
-                dgvSVChoDuyet.DataSource = danhSachDangKy_BL.LayDSSinhVienDangKy();
-                dgvSVDaDuyet.DataSource = danhSachDangKy_BL.LayDSSinhVien();
-            }
-        }
+        
 
         private void DanhSachDangKy_Load(object sender, EventArgs e)
         {
@@ -64,32 +31,7 @@ namespace QuanLyKyTucXa_main
             dgvSVDaDuyet.DataSource = danhSachDangKy_BL.LayDSSinhVien();
         }
 
-        private void btnGuiEmail_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Lấy danh sách sinh viên đã duyệt từ DataGridView
-                var dsDaDuyet = (List<SinhVien>)dgvSVDaDuyet.DataSource;
-
-                if (dsDaDuyet == null || dsDaDuyet.Count == 0)
-                {
-                    MessageBox.Show("Không có sinh viên nào được duyệt để gửi email!");
-                    return;
-                }
-
-                // Gửi email hàng loạt
-                foreach (var sv in dsDaDuyet)
-                {
-                    GuiEmailThongBao(sv.email, sv.maphong);
-                }
-
-                MessageBox.Show("Đã gửi email thông báo thành công!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi gửi email: " + ex.Message);
-            }
-        }
+        
 
         private void GuiEmailThongBao(string emailNhan, string maPhong)
         {
@@ -128,5 +70,81 @@ namespace QuanLyKyTucXa_main
                 throw new Exception($"Lỗi gửi email cho {emailNhan}: {ex.Message}");
             }
         }
+
+        private void GBtnXepphong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Lấy danh sách sinh viên chờ duyệt từ DataGridView
+                var dsDangKy = (List<SinhVienDangKy>)dgvSVChoDuyet.DataSource;
+
+                // Gọi nghiệp vụ xếp phòng
+                danhSachDangKy_BL.XepPhongTuDong(dsDangKy);
+
+                // Cập nhật lại DataGridView bằng cách tải lại dữ liệu từ CSDL
+                var dsChoDuyetMoi = danhSachDangKy_BL.LayDSSinhVienDangKy();
+                var dsDaDuyetMoi = danhSachDangKy_BL.LayDSSinhVien();
+
+                // Reset DataSource để DataGridView cập nhật
+                dgvSVChoDuyet.DataSource = null;
+                dgvSVChoDuyet.DataSource = dsChoDuyetMoi;
+
+                dgvSVDaDuyet.DataSource = null;
+                dgvSVDaDuyet.DataSource = dsDaDuyetMoi;
+
+                MessageBox.Show("Xếp phòng thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                // Luôn cập nhật DataGridView dù có lỗi hay không
+                dgvSVChoDuyet.DataSource = danhSachDangKy_BL.LayDSSinhVienDangKy();
+                dgvSVDaDuyet.DataSource = danhSachDangKy_BL.LayDSSinhVien();
+            }
+        }
+
+
+        // Fix code lại đoạn này nhé
+        private void GBtnGuiemail_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Lấy danh sách sinh viên đã duyệt từ DataGridView
+                var dsDaDuyet = (List<SinhVien>)dgvSVDaDuyet.DataSource;
+
+                if (dsDaDuyet == null || dsDaDuyet.Count == 0)
+                {
+                    MessageBox.Show("Không có sinh viên nào được duyệt để gửi email!");
+                    return;
+                }
+
+                // Gửi email hàng loạt
+                foreach (var sv in dsDaDuyet)
+                {
+                    GuiEmailThongBao(sv.email, sv.maphong);
+                }
+
+                MessageBox.Show("Đã gửi email thông báo thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi gửi email: " + ex.Message);
+            }
+        }
+
+        private void dgvSVDaDuyet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GBtnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

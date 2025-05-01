@@ -20,7 +20,8 @@ namespace QuanLyKyTucXa_main
             thongBaoGmail_BL = new ThongBaoGmail_BL();
         }
 
-        private void btnGuimail_Click(object sender, EventArgs e)
+
+        private void GBtnGuiemail_Click(object sender, EventArgs e)
         {
             string noidung = txtNoidungThongbao.Text.Trim();
             if (string.IsNullOrEmpty(noidung))
@@ -40,9 +41,9 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void txtNoidungThongbao_TextChanged(object sender, EventArgs e)
+        private void GBtnDongg_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

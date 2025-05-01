@@ -343,5 +343,74 @@
   <ItemGroup>
     <None Include="Resources\icons8-mortgage-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hand-cursor-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-separated-lists-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sorting-arrows-horizontal-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gmail-logo-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-100 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salary-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salary-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-100 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cells-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notifications-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-popup-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-register-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-100 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
