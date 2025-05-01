@@ -14,11 +14,11 @@ namespace QuanLyKyTucXa_main
 {
     public partial class FrmQuanLySinhVien : Form
     {
-        private QuanLySinhVien_BLL quanLySinhVien_BLL;
+        private QuanLySinhVien_BL quanLySinhVien_BLL;
         public FrmQuanLySinhVien()
         {
             InitializeComponent();
-            quanLySinhVien_BLL = new QuanLySinhVien_BLL();
+            quanLySinhVien_BLL = new QuanLySinhVien_BL();
         }
 
         private void FrmQuanLySinhVien_Load(object sender, EventArgs e)

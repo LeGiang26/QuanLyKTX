@@ -17,45 +17,17 @@ namespace QuanLyKyTucXa_main
         //Fields
         private Button currentButton;
         private Form activeForm = null;
-        //private MainMenu_BLL menuLogic;
         private NguoiDung nguoiDung;
+
 
         public FrmMainMenu(NguoiDung user)
         {
             InitializeComponent();
-            nguoiDung = user;
-            //menuLogic = new MainMenu_BLL(user);
-            customizeDesign();
-            ApplyPermissions(); // Hàm phân quyền
-            //this.Text = string.Empty;
-            //this.ControlBox = false;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            //this.DoubleBuffered = true;
+            this.nguoiDung = user;
+
+            customizeDesign();           
         }
-
-        private void ApplyPermissions()
-        {
-            if (nguoiDung.quyen == "User")
-            {
-                // Ẩn hoặc disable các chức năng dành riêng cho Admin
-                btnQuanlytiendien.Enabled = false;
-                btnSinhvien.Visible = false;
-                btnPhong.Visible = false;
-                panelTaikhoanSubmenu.Visible = false;
-                panelDanhmucSubmenu.Visible = false;
-                panelPhongSubmenu.Visible = false;
-
-                // Optional: thông báo hoặc gắn title quyền
-                //lblTitle.Text = $"Xin chào {nguoiDung.tendangnhap} - Quyền: {nguoiDung.quyen}";
-            }
-            else if (nguoiDung.quyen == "Admin")
-            {
-                //lblTitle.Text = $"Xin chào {nguoiDung.tendangnhap} - Quyền: {nguoiDung.quyen}";
-            }
-
-        }
-
-        //đổi màu nút
+   //đổi màu nút
         private void ActivateButton(object btnSender, int r, int g, int b)
         {
             if (btnSender != null && currentButton != (Button)btnSender)
@@ -81,7 +53,7 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        //ẩn hiện panel
+  //ẩn hiện panel
         private void openChildForm(Form childForm, Size size, Point point)
         {
             if (activeForm != null)
@@ -95,7 +67,7 @@ namespace QuanLyKyTucXa_main
             panelMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
+//thay doi title
             lblTitle.Text = childForm.Text;
             lblTitle.Size = size;
             lblTitle.Location = point;
@@ -141,10 +113,14 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        
+        private void FrmMainMenu_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
 
-        
- //QLPhong
+
+
+        //QLPhong
         private void btnDanhsachphong_Click(object sender, EventArgs e)
         {
             //openChildForm(new DanhSachDangKy(), new Size(156, 26), new Point(325, 15));
@@ -174,13 +150,18 @@ namespace QuanLyKyTucXa_main
         {
             ActivateButton(sender, 0, 150, 136);
             showSubMenu(panelDanhmucSubmenu);
-            if (nguoiDung.quyen == "User")
-                btnNguoidung.Enabled = false;
+            //if (nguoiDung.quyen == "User")
+            //    btnNguoidung.Enabled = false;
         }
         private void btnNhanvien_Click(object sender, EventArgs e)
         {
             openChildForm(new FrmQuanLyNhanVien(), new Size(192, 26), new Point(325, 15));
             //hideSubmenu();
+
+        }
+        private void btnLuongNV_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmThanhToanLuongNhanVien(), new Size(192, 26), new Point(325, 15));
 
         }
         private void btnKyluat_Click(object sender, EventArgs e)
@@ -210,16 +191,17 @@ namespace QuanLyKyTucXa_main
 
         private void btnBaoCaoNhanVien_Click(object sender, EventArgs e)
         {
-            openChildForm(new FrmThanhToanLuongNhanVien(), new Size(129, 26), new Point(308, 15));
-            //hideSubmenu();
+            //openChildForm(new FrmThanhToanLuongNhanVien(), new Size(129, 26), new Point(308, 15));
+            ////hideSubmenu();
         }
 
 //dangxuat
         private void btnDangxuat_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //FrmDangNhap dangNhap = new FrmDangNhap();
-            //dangNhap.Show();
+            this.Hide(); // Ẩn tạm FrmMainMenu đi trước
+            FrmDangNhap dangNhap = new FrmDangNhap();
+            dangNhap.ShowDialog(); // Chờ đăng nhập xong
+            this.Close(); // Đóng hẳn FrmMainMenu sau
         }
 //taikhoan
         private void btnTaikhoan_Click(object sender, EventArgs e)
@@ -233,6 +215,13 @@ namespace QuanLyKyTucXa_main
             //FrmDoiMatKhau frmDoiMk = new FrmDoiMatKhau();
             //frmDoiMk.id = this.idNguoiDung;
             //frmDoiMk.Show();
+        }
+
+       
+        private void btnBaoCaoTienDien_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmThongKeTienDien(), new Size(129, 26), new Point(308, 15));
+            //hideSubmenu();
         }
     }
 }

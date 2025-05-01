@@ -33,12 +33,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,17 +63,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatBotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChatBotControl.Designer.cs">
+      <DependentUpon>ChatBotControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhSachDangKy.Designer.cs">
       <DependentUpon>DanhSachDangKy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAdmin.Designer.cs">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBaoCaoNhanVien.cs">
       <SubType>Form</SubType>
@@ -104,11 +117,59 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMenuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuUser.Designer.cs">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyKyLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyKyLuat.Designer.cs">
+      <DependentUpon>FrmQuanLyKyLuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQuanLyNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmQuanLyNhanVien.Designer.cs">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyPhong.Designer.cs">
+      <DependentUpon>FrmQuanLyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyThietBi.Designer.cs">
+      <DependentUpon>FrmQuanLyThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyTienDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyTienDien.Designer.cs">
+      <DependentUpon>FrmQuanLyTienDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyTienNuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyTienNuoc.Designer.cs">
+      <DependentUpon>FrmQuanLyTienNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaNhanVien.Designer.cs">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmThanhToanLuongNhanVien.cs">
       <SubType>Form</SubType>
@@ -116,17 +177,23 @@
     <Compile Include="FrmThanhToanLuongNhanVien.Designer.cs">
       <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUser.cs">
+    <Compile Include="FrmThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUser.Designer.cs">
-      <DependentUpon>FrmUser.cs</DependentUpon>
+    <Compile Include="FrmThemNhanVien.Designer.cs">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmYeucausuachua.cs">
+    <Compile Include="FrmThongBaoSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmYeucausuachua.Designer.cs">
-      <DependentUpon>FrmYeucausuachua.cs</DependentUpon>
+    <Compile Include="FrmThongBaoSinhVien.Designer.cs">
+      <DependentUpon>FrmThongBaoSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongKeTienDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongKeTienDien.Designer.cs">
+      <DependentUpon>FrmThongKeTienDien.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmQuanLySinhVien.cs">
       <SubType>Form</SubType>
@@ -142,11 +209,11 @@
     <Compile Include="QuanLyDay.Designer.cs">
       <DependentUpon>QuanLyDay.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChatBotControl.resx">
+      <DependentUpon>ChatBotControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhSachDangKy.resx">
       <DependentUpon>DanhSachDangKy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdmin.resx">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBaoCaoNhanVien.resx">
       <DependentUpon>FrmBaoCaoNhanVien.cs</DependentUpon>
@@ -169,17 +236,47 @@
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuUser.resx">
+      <DependentUpon>FrmMenuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyKyLuat.resx">
+      <DependentUpon>FrmQuanLyKyLuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyNguoiDung.resx">
+      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLyNhanVien.resx">
       <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyPhong.resx">
+      <DependentUpon>FrmQuanLyPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLySinhVien.resx">
       <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyThietBi.resx">
+      <DependentUpon>FrmQuanLyThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyTienDien.resx">
+      <DependentUpon>FrmQuanLyTienDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyTienNuoc.resx">
+      <DependentUpon>FrmQuanLyTienNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaNhanVien.resx">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmThanhToanLuongNhanVien.resx">
       <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUser.resx">
-      <DependentUpon>FrmUser.cs</DependentUpon>
+    <EmbeddedResource Include="FrmThemNhanVien.resx">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongBaoSinhVien.resx">
+      <DependentUpon>FrmThongBaoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongKeTienDien.resx">
+      <DependentUpon>FrmThongKeTienDien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -189,6 +286,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLyDay.resx">
       <DependentUpon>QuanLyDay.cs</DependentUpon>
@@ -208,6 +306,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\QuanLy_Assistant\QuanLy_Assistant.csproj">
+      <Project>{fa46aed0-38bb-4ec7-b80d-4a21e7ab730e}</Project>
+      <Name>QuanLy_Assistant</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QuanLy_BLL\QuanLy_BLL.csproj">
       <Project>{2cffc70a-921e-4b22-bef2-6f1e2ebab23c}</Project>
       <Name>QuanLy_BLL</Name>
@@ -216,6 +318,27 @@
       <Project>{969867e0-e6a4-4653-8303-61d8aacf20bf}</Project>
       <Name>TransferObject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bolt %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-door %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-box.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

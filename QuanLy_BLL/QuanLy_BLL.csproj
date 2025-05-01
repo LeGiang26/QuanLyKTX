@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BLL_KyLuat.cs" />
+    <Compile Include="BLL_Phong.cs" />
+    <Compile Include="BLL_SinhVien.cs" />
+    <Compile Include="BLL_ThietBi.cs" />
+    <Compile Include="BLL_TienDien.cs" />
+    <Compile Include="BLL_TienNuoc.cs" />
     <Compile Include="DangNhap_BL.cs" />
     <Compile Include="DanhSachDangKy_BL.cs" />
     <Compile Include="MainMenu_BLL.cs" />
@@ -49,9 +54,11 @@
     <Compile Include="QuanLyDay_BL.cs" />
     <Compile Include="QuanLyNguoiDung_BL.cs" />
     <Compile Include="QuanLyNhanVien_BL.cs" />
-    <Compile Include="QuanLySinhVien_BLL.cs" />
+    <Compile Include="QuanLySinhVien_BL.cs" />
     <Compile Include="SinhVienDangKy_BL.cs" />
     <Compile Include="ThanhToanLuongNhanVien_BL.cs" />
+    <Compile Include="ThongBaoGmail_BL.cs" />
+    <Compile Include="ThongKeTienDien_BL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuanLy_DAL\QuanLy_DAL.csproj">

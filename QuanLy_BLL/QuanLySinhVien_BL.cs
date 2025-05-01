@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 using TransferObject;
 using QuanLy_DAL;
 using System.Data.SqlClient;
-using static QuanLy_DAL.QuanLySinhVien_DAL;
 
 namespace QuanLy_BLL
 {
-    public class QuanLySinhVien_BLL
+    public class QuanLySinhVien_BL
     {
-        private QuanLySinhVien_DAL quanLySinhVien_DAL;
+        private QuanLySinhVien_DL quanLySinhVien_DAL;
 
-        public QuanLySinhVien_BLL()
+        public QuanLySinhVien_BL()
         {
-            quanLySinhVien_DAL = new QuanLySinhVien_DAL();
+            quanLySinhVien_DAL = new QuanLySinhVien_DL();
         }
 
         public List<SinhVien> LayDanhSachSinhVien()

@@ -31,7 +31,19 @@ namespace QuanLy_BLL
             }
         }
 
-        public bool ThemNhanVien(NhanVien nv)
+        public List<NhanVien> TimKiemNhanVien(string keyword, bool timTheoMa)
+        {
+            try
+            {
+                return quanLyNhanVien_DL.TimKiemNhanVien(keyword, timTheoMa);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int ThemNhanVien(NhanVien nv)
         {
             try
             {
@@ -42,18 +54,8 @@ namespace QuanLy_BLL
                 throw ex;
             }
         }
-        public bool SuaNhanVien(NhanVien nv)
-        {
-            try
-            {
-                return quanLyNhanVien_DL.SuaNhanVien(nv);
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
-        public bool XoaNhanVien(string manv)
+
+        public int XoaNhanVien(string manv)
         {
             try
             {
@@ -64,11 +66,12 @@ namespace QuanLy_BLL
                 throw ex;
             }
         }
-        public List<NhanVien> TimKiemNhanVien(string keyword, bool timTheoMa)
+
+        public int CapNhapNhanVien(NhanVien nv)
         {
             try
             {
-                return quanLyNhanVien_DL.TimKiemNhanVien(keyword, timTheoMa);
+                return quanLyNhanVien_DL.CapNhapNhanVien(nv);
             }
             catch (SqlException ex)
             {

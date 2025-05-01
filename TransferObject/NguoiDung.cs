@@ -12,14 +12,12 @@ namespace TransferObject
         public string tendangnhap { get; set; }
 
         public string matkhau { get; set; }
-        public string quyen { get; set; }
 
 
-        public NguoiDung(string tenDangNhap, string matKhau, string Quyen)
+        public NguoiDung(string tenDangNhap, string matKhau)
         {
             this.tendangnhap = tenDangNhap;
             this.matkhau = matKhau;
-            this.quyen = Quyen;
         }
 
     }

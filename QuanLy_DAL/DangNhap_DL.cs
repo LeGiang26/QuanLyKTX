@@ -10,26 +10,24 @@ using TransferObject;
 
 namespace QuanLy_DAL
 {
-    public class DangNhap_DL: DataProvider
+    public class DangNhap_DL : DataProvider
     {
-        public NguoiDung KiemTraDangNhap(string tenDangNhap, string matKhau, string quyen)
+        public NguoiDung KiemTraDangNhap(string tenDangNhap, string matKhau)
         {
             try
             {
                 Connect();
-                string sql = "SELECT * FROM NguoiDung WHERE tendangnhap=@tendangnhap AND matkhau=@matkhau AND quyen=@quyen";
+                string sql = "SELECT * FROM NguoiDung WHERE tendangnhap=@tendangnhap AND matkhau=@matkhau";
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("@tendangnhap", tenDangNhap);
                 cmd.Parameters.AddWithValue("@matkhau", matKhau);
-                cmd.Parameters.AddWithValue("@quyen", quyen);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     return new NguoiDung(
                         reader["tendangnhap"].ToString(),
-                        reader["matkhau"].ToString(),
-                        reader["quyen"].ToString()
+                        reader["matkhau"].ToString()
                     );
                 }
                 return null;

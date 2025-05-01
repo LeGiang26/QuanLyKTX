@@ -8,28 +8,62 @@ namespace TransferObject
 {
     public class Phong
     {
-        public string maphong { get; set; }
-        public string tenphong { get; set; }
-        public string sosv { get; set; }
-        public string sosvtoida { get; set; }
-        public string tinhtrang { get; set; }
-        public string loaiphong { get; set; }
-        public string xeploai { get; set; }
-        public string day { get; set; }
-        public string chisocu { get; set; }
+        public string Maphong { get; set; }
+        public string Tenphong { get; set; }
+        public int Sosv { get; set; }
+        public int Sosvtoida { get; set; }
+        public string Tinhtrang { get; set; }
+        public string Loaiphong { get; set; }
+        public string Xeploai { get; set; }
+        public string Day { get; set; }
 
-        public  Phong (string maPhong, string tenPhong, string soSV, string soSVToiDa, 
-            string tinhTrang, string loaiPhong, string xepLoai, string Day, string chiSoCu)
+        public Phong(string maphong, string tenphong, string sosv, string sosvtoida,
+            string tinhtrang, string loaiphong, string xeploai, string day)
         {
-            this.maphong=maPhong;
-            this.tenphong=tenPhong;
-            this.sosv = soSV;
-            this.sosvtoida =soSVToiDa;
-            this.tinhtrang = tinhTrang;
-            this.loaiphong = loaiPhong;
-            this.xeploai = xepLoai;
-            this.day = Day;
-            this.chisocu = chiSoCu;
+            Maphong = maphong;
+            Tenphong = tenphong;
+            Sosv = int.Parse(sosv);
+            Sosvtoida = int.Parse(sosvtoida);
+            Tinhtrang = tinhtrang;
+            Loaiphong = loaiphong;
+            Xeploai = xeploai;
+            Day = day;
+        }
+
+        public Phong(string maphong, string tenphong, int sosv, int sosvtoida,
+            string tinhtrang, string loaiphong, string xeploai, string day)
+        {
+            Maphong = maphong;
+            Tenphong = tenphong;
+            Sosv = sosv;
+            Sosvtoida = sosvtoida;
+            Tinhtrang = tinhtrang;
+            Loaiphong = loaiphong;
+            Xeploai = xeploai;
+            Day = day;
+        }
+
+        public Phong(string maphong, string tenphong, int sosv, int sosvtoida,
+                     string loaiphong, string xeploai, string day)
+        {
+            Maphong = maphong;
+            Tenphong = tenphong;
+            Sosv = sosv;
+            Sosvtoida = sosvtoida;
+            Loaiphong = loaiphong;
+            Xeploai = xeploai;
+            Day = day;
+        }
+
+        public Phong(string maphong, string tenphong, string sosvtoida,
+                     string loaiphong, string xeploai, string day)
+        {
+            Maphong = maphong;
+            Tenphong = tenphong;
+            Sosvtoida = int.Parse(sosvtoida);
+            Loaiphong = loaiphong;
+            Xeploai = xeploai;
+            Day = day;
         }
     }
 }

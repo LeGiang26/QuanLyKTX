@@ -17,7 +17,7 @@ namespace QuanLyKyTucXa_main
         {
             InitializeComponent();
         }
-        QuanLySinhVien_BLL bllsv = new QuanLySinhVien_BLL();
+        QuanLySinhVien_BL bllsv = new QuanLySinhVien_BL();
 
         private void FrmBaoCaoSinhVien_Load(object sender, EventArgs e)
         {
@@ -68,6 +68,11 @@ namespace QuanLyKyTucXa_main
 
             // Tự động điều chỉnh độ rộng cột
             worksheet.Columns.AutoFit();
+        }
+
+        private void dgvSinhvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

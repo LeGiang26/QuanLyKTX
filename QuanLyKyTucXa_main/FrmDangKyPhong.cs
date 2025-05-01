@@ -23,7 +23,6 @@ namespace QuanLyKyTucXa_main
 
         }
 
-
         private void btnDangky_Click(object sender, EventArgs e)
         {
             // Kiểm tra dữ liệu nhập
@@ -31,6 +30,7 @@ namespace QuanLyKyTucXa_main
                 string.IsNullOrEmpty(txtTensv.Text) ||
                 string.IsNullOrEmpty(cbGioitinh.Text) ||
                 string.IsNullOrEmpty(txtQuequan.Text) ||
+                string.IsNullOrEmpty(txtEmail.Text) ||
                 string.IsNullOrEmpty(cbKhoa.Text) ||
                 string.IsNullOrEmpty(txtLop.Text) ||
                 string.IsNullOrEmpty(cbLoaiuutien.Text))
@@ -53,6 +53,7 @@ namespace QuanLyKyTucXa_main
                 cbGioitinh.Text,
                 dtpNgaysinh.Value.ToString("yyyy-MM-dd"), // Định dạng ngày
                 txtQuequan.Text,
+                txtEmail.Text,
                 cbKhoa.Text,
                 txtLop.Text,
                 cbLoaiuutien.Text

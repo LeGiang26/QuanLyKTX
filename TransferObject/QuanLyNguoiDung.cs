@@ -9,21 +9,15 @@ namespace TransferObject
     public class QuanLyNguoiDung
     {
         public string manguoidung { get; set; }
-        public string manv { get; set; }
         public string tendangnhap { get; set; }
-
         public string matkhau { get; set; }
-        public string quyen { get; set; }
 
 
-        public QuanLyNguoiDung(string maNguoiDung, string maNV, 
-            string tenDangNhap, string matKhau, string Quyen)
+        public QuanLyNguoiDung(string maNguoiDung, string tenDangNhap, string matKhau)
         {
             this.manguoidung = maNguoiDung;
-            this.manv = maNV;
             this.tendangnhap = tenDangNhap;
             this.matkhau = matKhau;
-            this.quyen = Quyen;
         }
     }
 }

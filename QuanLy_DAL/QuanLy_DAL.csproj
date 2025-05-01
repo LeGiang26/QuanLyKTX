@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DAL_KyLuat.cs" />
+    <Compile Include="DAL_Phong.cs" />
+    <Compile Include="DAL_SinhVien.cs" />
+    <Compile Include="DAL_ThietBi.cs" />
+    <Compile Include="DAL_TienDien.cs" />
+    <Compile Include="DAL_TienNuoc.cs" />
     <Compile Include="DangNhap_DL.cs" />
     <Compile Include="DanhSachDangKy_DL.cs" />
     <Compile Include="DataProvider.cs" />
@@ -49,9 +54,11 @@
     <Compile Include="QuanLyDay_DL.cs" />
     <Compile Include="QuanLyNguoiDung_DL.cs" />
     <Compile Include="QuanLyNhanVien_DL.cs" />
-    <Compile Include="QuanLySinhVien_DAL.cs" />
+    <Compile Include="QuanLySinhVien_DL.cs" />
     <Compile Include="SinhVienDangKy_DL.cs" />
     <Compile Include="ThanhToanLuongNhanVien_DL.cs" />
+    <Compile Include="ThongBaoGmail_DL.cs" />
+    <Compile Include="ThongKeTienDien_DL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransferObject\TransferObject.csproj">

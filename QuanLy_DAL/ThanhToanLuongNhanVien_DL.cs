@@ -9,7 +9,7 @@ using System.Data;
 
 namespace QuanLy_DAL
 {
-    public class ThanhToanLuongNhanVien_DL: DataProvider
+    public class ThanhToanLuongNhanVien_DL : DataProvider
     {
         public List<NhanVien> LayDanhSachNhanVien()
         {
@@ -44,7 +44,7 @@ namespace QuanLy_DAL
 
         public List<LuongNhanVien> LayDanhLuongNhanVien()
         {
-            string mahoadon, manv, tennv, luongcoban, hesoluong, phucap, khautru, songaycong, ngaythanhtoan, tongluong;
+            string maluong, manv, tennv, thang, luongcoban, phucap, thuongphat, ngaythanhtoan, tongluong;
             List<LuongNhanVien> luongNhanViens = new List<LuongNhanVien>();
             string sql = "SELECT * FROM LuongNhanVien";
             try
@@ -53,18 +53,17 @@ namespace QuanLy_DAL
                 SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
                 while (reader.Read())
                 {
-                    mahoadon = reader[0].ToString();
+                    maluong = reader[0].ToString();
                     manv = reader[1].ToString();
                     tennv = reader[2].ToString();
-                    luongcoban = reader[3].ToString();
-                    hesoluong = reader[4].ToString();
+                    thang = reader[3].ToString();
+                    luongcoban = reader[4].ToString();
                     phucap = reader[5].ToString();
-                    khautru = reader[6].ToString();
-                    songaycong = reader[7].ToString();
-                    ngaythanhtoan = reader[8].ToString();
-                    tongluong = reader[9].ToString();
+                    thuongphat = reader[6].ToString();
+                    ngaythanhtoan = reader[7].ToString();
+                    tongluong = reader[8].ToString();
 
-                    LuongNhanVien luongNhanVien = new LuongNhanVien(mahoadon, manv, tennv, luongcoban, hesoluong, phucap, khautru, songaycong, ngaythanhtoan, tongluong);
+                    LuongNhanVien luongNhanVien = new LuongNhanVien(maluong, manv, tennv, thang, luongcoban, phucap, thuongphat, ngaythanhtoan, tongluong);
                     luongNhanViens.Add(luongNhanVien);
                 }
                 reader.Close();
@@ -81,19 +80,22 @@ namespace QuanLy_DAL
         }
         public void ThemHoacCapNhatLuong(LuongNhanVien luongNV)
         {
-            string sql = @"INSERT INTO LuongNhanVien (manv, tennv, luongcoban, hesoluong, phucap, khautru, songaycong, ngaythanhtoan, tongluong, trangthai)
-               VALUES (@manv, @tennv, @luongcoban, @hesoluong, @phucap, @khautru, @songaycong, @ngaythanhtoan, @tongluong)";
+            string sql = @"
+        INSERT INTO LuongNhanVien 
+            (manv, tennv, thang, luongcoban, phucap, thuongphat, ngaythanhtoan, tongluong)
+        VALUES 
+            (@manv, @tennv, @thang, @luongcoban, @phucap, @thuongphat, @ngaythanhtoan, @tongluong)";
+
             try
             {
                 Connect();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("@manv", luongNV.manv);
                 cmd.Parameters.AddWithValue("@tennv", luongNV.tennv);
+                cmd.Parameters.AddWithValue("@thang", luongNV.thang);
                 cmd.Parameters.AddWithValue("@luongcoban", decimal.Parse(luongNV.luongcoban));
-                cmd.Parameters.AddWithValue("@hesoluong", decimal.Parse(luongNV.hesoluong));
                 cmd.Parameters.AddWithValue("@phucap", decimal.Parse(luongNV.phucap));
-                cmd.Parameters.AddWithValue("@khautru", decimal.Parse(luongNV.khautru));
-                cmd.Parameters.AddWithValue("@songaycong", int.Parse(luongNV.songaycong));
+                cmd.Parameters.AddWithValue("@thuongphat", decimal.Parse(luongNV.thuongphat));
                 cmd.Parameters.AddWithValue("@ngaythanhtoan", DateTime.Parse(luongNV.ngaythanhtoan));
                 cmd.Parameters.AddWithValue("@tongluong", decimal.Parse(luongNV.tongluong));
                 cmd.ExecuteNonQuery();
@@ -110,46 +112,46 @@ namespace QuanLy_DAL
 
         public void CapNhatLuongNhanVien(LuongNhanVien luongNV)
         {
-            string sql = @"UPDATE LuongNhanVien 
-                   SET manv = @manv, tennv = @tennv, luongcoban = @luongcoban, 
-                       hesoluong = @hesoluong, phucap = @phucap, khautru = @khautru, 
-                       songaycong = @songaycong, ngaythanhtoan = @ngaythanhtoan, 
-                       tongluong = @tongluong
-                   WHERE mahoadon = @mahoadon";
+            string sql = @"
+        UPDATE LuongNhanVien 
+        SET 
+            manv = @manv, 
+            tennv = @tennv, 
+            thang = @thang, 
+            luongcoban = @luongcoban, 
+            phucap = @phucap, 
+            thuongphat = @thuongphat, 
+            ngaythanhtoan = @ngaythanhtoan, 
+            tongluong = @tongluong
+        WHERE maluong = @maluong";
+
             try
             {
                 Connect();
                 SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@mahoadon", luongNV.mahoadon);
+                cmd.Parameters.AddWithValue("@maluong", luongNV.maluong);
                 cmd.Parameters.AddWithValue("@manv", luongNV.manv);
                 cmd.Parameters.AddWithValue("@tennv", luongNV.tennv);
+                cmd.Parameters.AddWithValue("@thang", luongNV.thang);
                 cmd.Parameters.AddWithValue("@luongcoban", decimal.Parse(luongNV.luongcoban));
-                cmd.Parameters.AddWithValue("@hesoluong", decimal.Parse(luongNV.hesoluong));
                 cmd.Parameters.AddWithValue("@phucap", decimal.Parse(luongNV.phucap));
-                cmd.Parameters.AddWithValue("@khautru", decimal.Parse(luongNV.khautru));
-                cmd.Parameters.AddWithValue("@songaycong", int.Parse(luongNV.songaycong));
+                cmd.Parameters.AddWithValue("@thuongphat", decimal.Parse(luongNV.thuongphat));
                 cmd.Parameters.AddWithValue("@ngaythanhtoan", DateTime.Parse(luongNV.ngaythanhtoan));
                 cmd.Parameters.AddWithValue("@tongluong", decimal.Parse(luongNV.tongluong));
                 cmd.ExecuteNonQuery();
             }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                DisConnect();
-            }
+            catch (SqlException ex) { throw ex; }
+            finally { DisConnect(); }
         }
 
-        public void XoaLuongNhanVien(string maHoaDon)
+        public void XoaLuongNhanVien(string maLuong)
         {
-            string sql = "DELETE FROM LuongNhanVien WHERE mahoadon = @mahoadon";
+            string sql = "DELETE FROM LuongNhanVien WHERE maluong = @maluong";
             try
             {
                 Connect();
                 SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("@mahoadon", maHoaDon);
+                cmd.Parameters.AddWithValue("@maluong", maLuong);
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException ex)

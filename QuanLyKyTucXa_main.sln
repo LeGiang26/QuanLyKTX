@@ -11,6 +11,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLy_DAL", "QuanLy_DAL\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferObject", "TransferObject\TransferObject.csproj", "{969867E0-E6A4-4653-8303-61D8AACF20BF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E037C00-F048-4C86-82B6-2FA9285D90C0}"
+	ProjectSection(SolutionItems) = preProject
+		Myscript.sql = Myscript.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLy_Assistant", "QuanLy_Assistant\QuanLy_Assistant.csproj", "{FA46AED0-38BB-4EC7-B80D-4A21E7AB730E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fonts", "Fonts", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		bin\Debug\Fonts\DejaVuSans.ttf = bin\Debug\Fonts\DejaVuSans.ttf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +45,10 @@ Global
 		{969867E0-E6A4-4653-8303-61D8AACF20BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969867E0-E6A4-4653-8303-61D8AACF20BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969867E0-E6A4-4653-8303-61D8AACF20BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA46AED0-38BB-4EC7-B80D-4A21E7AB730E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA46AED0-38BB-4EC7-B80D-4A21E7AB730E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA46AED0-38BB-4EC7-B80D-4A21E7AB730E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA46AED0-38BB-4EC7-B80D-4A21E7AB730E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,9 +19,9 @@ namespace QuanLy_BLL
             dangnhapDL = new DangNhap_DL();
         }
 
-        public NguoiDung KiemTraDangNhap(string tenDangNhap, string matKhau, string quyen)
+        public NguoiDung KiemTraDangNhap(string tenDangNhap, string matKhau)
         {
-            return dangnhapDL.KiemTraDangNhap(tenDangNhap, matKhau, quyen);
+            return dangnhapDL.KiemTraDangNhap(tenDangNhap, matKhau);
         }
     }
 }

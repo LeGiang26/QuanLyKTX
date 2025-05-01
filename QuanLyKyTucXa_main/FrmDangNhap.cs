@@ -21,47 +21,30 @@ namespace QuanLyKyTucXa_main
         {
             InitializeComponent();
             dangnhapBL = new DangNhap_BL();
-            LoadQuyen();
         }
-        private void LoadQuyen()
-        {
-            cbQuyen.Items.Add("Admin");
-            cbQuyen.Items.Add("User");
-            cbQuyen.SelectedIndex = 0;
-        }
+
+
 
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             string tenDangNhap = txtTaikhoan.Text.Trim();
             string matKhau = txtMatkhau.Text.Trim();
-            string quyen = cbQuyen.SelectedItem?.ToString();
 
-            if (string.IsNullOrEmpty(tenDangNhap) || string.IsNullOrEmpty(matKhau) || string.IsNullOrEmpty(quyen))
+            if (string.IsNullOrEmpty(tenDangNhap) || string.IsNullOrEmpty(matKhau))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            NguoiDung nguoiDung = dangnhapBL.KiemTraDangNhap(tenDangNhap, matKhau, quyen);
+            NguoiDung nguoiDung = dangnhapBL.KiemTraDangNhap(tenDangNhap, matKhau);
 
             if (nguoiDung != null)
             {
                 this.Hide();
-                FrmMainMenu frmMain = new FrmMainMenu(nguoiDung); // Truyền NguoiDung
-                frmMain.ShowDialog();
+                FrmMainMenu frmMainMenu = new FrmMainMenu();
+                frmMainMenu.ShowDialog();
+
                 this.Close();
-                //this.Hide();
-                //if (quyen == "Admin")
-                //{
-                //    FrmAdmin frmAdmin = new FrmAdmin();
-                //    frmAdmin.ShowDialog();
-                //}
-                //else
-                //{
-                //    FrmUser frmUser = new FrmUser();
-                //    frmUser.ShowDialog();
-                //}
-                //this.Close();
             }
             else
             {
@@ -69,4 +52,5 @@ namespace QuanLyKyTucXa_main
             }
         }
     }
+    
 }
